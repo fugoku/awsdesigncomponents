@@ -16764,6 +16764,16 @@ In most cases, they aren't needed, as the \`svg\` element inherits styles from t
       "name": "actionButtonIconSvg",
     },
     {
+      "description": "Use this to replace the primary action.
+If this is provided then any other \`actionButton*\` properties will be ignored.
+Note that you should still provide an \`onAction\` function in order to handle keyboard submission.",
+      "isDefault": false,
+      "name": "customPrimaryAction",
+      "systemTags": [
+        "core",
+      ],
+    },
+    {
       "description": "Use this slot to add secondary actions to the prompt input.",
       "isDefault": false,
       "name": "secondaryActions",
@@ -74673,6 +74683,7 @@ Note that programmatic events ignore disabled attribute and will trigger listene
           },
         },
         {
+          "description": "Finds the action button. Note that, despite its typings, this may return null.",
           "name": "findActionButton",
           "parameters": [],
           "returnType": {
@@ -74833,6 +74844,14 @@ Component's wrapper class",
           },
         },
         {
+          "name": "findCustomPrimaryAction",
+          "parameters": [],
+          "returnType": {
+            "name": "ElementWrapper | null",
+            "type": "union",
+          },
+        },
+        {
           "name": "findNativeTextarea",
           "parameters": [],
           "returnType": {
@@ -74847,6 +74866,7 @@ Component's wrapper class",
           },
         },
         {
+          "description": "Finds the secondary actions slot. Note that, despite its typings, this may return null.",
           "name": "findSecondaryActions",
           "parameters": [],
           "returnType": {
@@ -74864,14 +74884,8 @@ Component's wrapper class",
           "name": "findSecondaryContent",
           "parameters": [],
           "returnType": {
-            "name": "ElementWrapper",
-            "type": "reference",
-            "typeArguments": [
-              {
-                "name": "HTMLDivElement",
-                "type": "reference",
-              },
-            ],
+            "name": "ElementWrapper | null",
+            "type": "union",
           },
         },
         {
@@ -133883,6 +133897,7 @@ If not specified, the method returns the result text that is currently displayed
           },
         },
         {
+          "description": "Finds the action button. Note that, despite its typings, this may return null.",
           "name": "findActionButton",
           "parameters": [],
           "returnType": {
@@ -134046,6 +134061,15 @@ Component's wrapper class",
           },
         },
         {
+          "name": "findCustomPrimaryAction",
+          "parameters": [],
+          "returnType": {
+            "name": "ElementWrapper",
+            "type": "reference",
+            "typeArguments": [],
+          },
+        },
+        {
           "name": "findNativeTextarea",
           "parameters": [],
           "returnType": {
@@ -134055,6 +134079,7 @@ Component's wrapper class",
           },
         },
         {
+          "description": "Finds the secondary actions slot. Note that, despite its typings, this may return null.",
           "name": "findSecondaryActions",
           "parameters": [],
           "returnType": {
