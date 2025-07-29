@@ -35,6 +35,62 @@ when the \`dismissible\` property is set to \`true\`.",
         "name": "AlertProps.AnalyticsMetadata",
         "properties": [
           {
+            "inlineType": {
+              "name": "ErrorContext",
+              "properties": [
+                {
+                  "inlineType": {
+                    "name": "ErrorCategory",
+                    "type": "union",
+                    "values": [
+                      "OTHER",
+                      "INPUT_VALIDATION",
+                      "PERMISSION_IAM",
+                      "RESOURCE_AVAILABILITY",
+                      "NETWORK_CONNECTIVITY",
+                      "SERVICE_QUOTAS_LIMITS",
+                      "CONFIGURATION_CONFLICTS",
+                      "API_SPECIFIC",
+                    ],
+                  },
+                  "name": "errorCategory",
+                  "optional": false,
+                  "type": "string",
+                },
+                {
+                  "name": "errorMessage",
+                  "optional": false,
+                  "type": "string",
+                },
+                {
+                  "inlineType": {
+                    "name": "ErrorSubCategory",
+                    "type": "union",
+                    "values": [
+                      "DATA_FORMAT_ISSUES",
+                      "PARAMETER_VALIDATION_ISSUES",
+                      "ACCESS_CONTROL_ISSUES",
+                      "IDENTITY_MANAGEMENT_PROBLEMS",
+                      "RESOURCE_STATE_ISSUES",
+                      "RESOURCE_CAPACITY_PROBLEMS",
+                      "CONNECTION_PROBLEMS",
+                      "NETWORK_CONFIGURATION_ISSUES",
+                      "RESOURCE_LIMIT_EXCEEDED",
+                      "SERVICE_QUOTA_RESTRICTIONS",
+                      "SERVICE_INTEGRATION_CONFLICTS",
+                      "RESOURCE_CONFIGURATION_MISMATCHES",
+                      "SERVICE_SPECIFIC_OPERATIONS",
+                      "API_REQUEST_PROBLEMS",
+                      "OTHER",
+                    ],
+                  },
+                  "name": "errorSubCategory",
+                  "optional": false,
+                  "type": "string",
+                },
+              ],
+              "type": "object",
+            },
             "name": "errorContext",
             "optional": true,
             "type": "ErrorContext",
@@ -327,6 +383,52 @@ exports[`Components definition for annotation-context matches the snapshot: anno
         "name": "TutorialPanelProps.TutorialDetail",
         "properties": [
           {
+            "inlineType": {
+              "name": "TutorialPanelProps.Tutorial",
+              "properties": [
+                {
+                  "name": "completed",
+                  "optional": false,
+                  "type": "boolean",
+                },
+                {
+                  "name": "completedScreenDescription",
+                  "optional": true,
+                  "type": "React.ReactNode",
+                },
+                {
+                  "name": "description",
+                  "optional": true,
+                  "type": "React.ReactNode",
+                },
+                {
+                  "name": "learnMoreUrl",
+                  "optional": true,
+                  "type": "string | null",
+                },
+                {
+                  "name": "prerequisitesAlert",
+                  "optional": true,
+                  "type": "React.ReactNode",
+                },
+                {
+                  "name": "prerequisitesNeeded",
+                  "optional": true,
+                  "type": "boolean",
+                },
+                {
+                  "name": "tasks",
+                  "optional": false,
+                  "type": "ReadonlyArray<TutorialPanelProps.Task>",
+                },
+                {
+                  "name": "title",
+                  "optional": false,
+                  "type": "string",
+                },
+              ],
+              "type": "object",
+            },
             "name": "tutorial",
             "optional": false,
             "type": "TutorialPanelProps.Tutorial",
@@ -350,6 +452,52 @@ the tutorial.",
         "name": "TutorialPanelProps.TutorialDetail",
         "properties": [
           {
+            "inlineType": {
+              "name": "TutorialPanelProps.Tutorial",
+              "properties": [
+                {
+                  "name": "completed",
+                  "optional": false,
+                  "type": "boolean",
+                },
+                {
+                  "name": "completedScreenDescription",
+                  "optional": true,
+                  "type": "React.ReactNode",
+                },
+                {
+                  "name": "description",
+                  "optional": true,
+                  "type": "React.ReactNode",
+                },
+                {
+                  "name": "learnMoreUrl",
+                  "optional": true,
+                  "type": "string | null",
+                },
+                {
+                  "name": "prerequisitesAlert",
+                  "optional": true,
+                  "type": "React.ReactNode",
+                },
+                {
+                  "name": "prerequisitesNeeded",
+                  "optional": true,
+                  "type": "boolean",
+                },
+                {
+                  "name": "tasks",
+                  "optional": false,
+                  "type": "ReadonlyArray<TutorialPanelProps.Task>",
+                },
+                {
+                  "name": "title",
+                  "optional": false,
+                  "type": "string",
+                },
+              ],
+              "type": "object",
+            },
             "name": "tutorial",
             "optional": false,
             "type": "TutorialPanelProps.Tutorial",
@@ -374,9 +522,19 @@ this event was fired.",
         "name": "AnnotationContextProps.StepChangeDetail",
         "properties": [
           {
+            "inlineType": {
+              "name": ""open" | "next" | "previous" | "auto-fallback"",
+              "type": "union",
+              "values": [
+                "open",
+                "next",
+                "previous",
+                "auto-fallback",
+              ],
+            },
             "name": "reason",
             "optional": false,
-            "type": ""open" | "next" | "previous" | "auto-fallback"",
+            "type": "string",
           },
           {
             "name": "step",
@@ -470,6 +628,25 @@ in the \`detail\` property of the \`onStartTutorial\` event.",
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "(openState: boolean, stepIndex: number, totalStepCount: number) => string",
+              "parameters": [
+                {
+                  "name": "openState",
+                  "type": "boolean",
+                },
+                {
+                  "name": "stepIndex",
+                  "type": "number",
+                },
+                {
+                  "name": "totalStepCount",
+                  "type": "number",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "labelHotspot",
             "optional": false,
             "type": "(openState: boolean, stepIndex: number, totalStepCount: number) => string",
@@ -485,11 +662,41 @@ in the \`detail\` property of the \`onStartTutorial\` event.",
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "(stepIndex: number, totalStepCount: number) => string",
+              "parameters": [
+                {
+                  "name": "stepIndex",
+                  "type": "number",
+                },
+                {
+                  "name": "totalStepCount",
+                  "type": "number",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "stepCounterText",
             "optional": false,
             "type": "(stepIndex: number, totalStepCount: number) => string",
           },
           {
+            "inlineType": {
+              "name": "(taskIndex: number, taskTitle: string) => string",
+              "parameters": [
+                {
+                  "name": "taskIndex",
+                  "type": "number",
+                },
+                {
+                  "name": "taskTitle",
+                  "type": "string",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "taskTitle",
             "optional": false,
             "type": "(taskIndex: number, taskTitle: string) => string",
@@ -560,9 +767,17 @@ exports[`Components definition for app-layout matches the snapshot: app-layout 1
         "name": "AppLayoutProps.SplitPanelPreferences",
         "properties": [
           {
+            "inlineType": {
+              "name": ""bottom" | "side"",
+              "type": "union",
+              "values": [
+                "bottom",
+                "side",
+              ],
+            },
             "name": "position",
             "optional": false,
-            "type": ""bottom" | "side"",
+            "type": "string",
           },
         ],
         "type": "object",
@@ -676,9 +891,21 @@ to control the state by listening to \`toolsChange\` and providing \`toolsOpen\`
         "name": "AppLayoutProps.AnalyticsMetadata",
         "properties": [
           {
+            "inlineType": {
+              "name": "FlowType",
+              "type": "union",
+              "values": [
+                "create",
+                "edit",
+                "delete",
+                "home",
+                "dashboard",
+                "view-resource",
+              ],
+            },
             "name": "flowType",
             "optional": true,
-            "type": "FlowType",
+            "type": "string",
           },
           {
             "name": "instanceIdentifier",
@@ -943,9 +1170,17 @@ By default, the preference is \`{ position: 'bottom' }\`",
         "name": "AppLayoutProps.SplitPanelPreferences",
         "properties": [
           {
+            "inlineType": {
+              "name": ""bottom" | "side"",
+              "type": "union",
+              "values": [
+                "bottom",
+                "side",
+              ],
+            },
             "name": "position",
             "optional": false,
-            "type": ""bottom" | "side"",
+            "type": "string",
           },
         ],
         "type": "object",
@@ -1079,9 +1314,17 @@ exports[`Components definition for app-layout-toolbar matches the snapshot: app-
         "name": "AppLayoutProps.SplitPanelPreferences",
         "properties": [
           {
+            "inlineType": {
+              "name": ""bottom" | "side"",
+              "type": "union",
+              "values": [
+                "bottom",
+                "side",
+              ],
+            },
             "name": "position",
             "optional": false,
-            "type": ""bottom" | "side"",
+            "type": "string",
           },
         ],
         "type": "object",
@@ -1201,9 +1444,21 @@ to control the state by listening to \`toolsChange\` and providing \`toolsOpen\`
         "name": "AppLayoutProps.AnalyticsMetadata",
         "properties": [
           {
+            "inlineType": {
+              "name": "FlowType",
+              "type": "union",
+              "values": [
+                "create",
+                "edit",
+                "delete",
+                "home",
+                "dashboard",
+                "view-resource",
+              ],
+            },
             "name": "flowType",
             "optional": true,
-            "type": "FlowType",
+            "type": "string",
           },
           {
             "name": "instanceIdentifier",
@@ -1469,9 +1724,17 @@ By default, the preference is \`{ position: 'bottom' }\`",
         "name": "AppLayoutProps.SplitPanelPreferences",
         "properties": [
           {
+            "inlineType": {
+              "name": ""bottom" | "side"",
+              "type": "union",
+              "values": [
+                "bottom",
+                "side",
+              ],
+            },
             "name": "position",
             "optional": false,
-            "type": ""bottom" | "side"",
+            "type": "string",
           },
         ],
         "type": "object",
@@ -1589,9 +1852,17 @@ This will **not** be called for any custom filter components you have defined in
         "name": "CartesianChartProps.HighlightChangeDetail<Series>",
         "properties": [
           {
+            "inlineType": {
+              "name": "NonNullable<Series>",
+              "type": "union",
+              "values": [
+                "Series",
+                "{}",
+              ],
+            },
             "name": "highlightedSeries",
             "optional": false,
-            "type": "Series | null",
+            "type": "NonNullable<Series>",
           },
         ],
         "type": "object",
@@ -1761,6 +2032,17 @@ A value of \`null\` means no series is highlighted.
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "AreaChartProps.TickFormatter<number>",
+              "parameters": [
+                {
+                  "name": "value",
+                  "type": "T",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "detailTotalFormatter",
             "optional": true,
             "type": "AreaChartProps.TickFormatter<number>",
@@ -1796,6 +2078,17 @@ A value of \`null\` means no series is highlighted.
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "CartesianChartProps.TickFormatter<T>",
+              "parameters": [
+                {
+                  "name": "value",
+                  "type": "T",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "xTickFormatter",
             "optional": true,
             "type": "CartesianChartProps.TickFormatter<T>",
@@ -1806,6 +2099,17 @@ A value of \`null\` means no series is highlighted.
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "CartesianChartProps.TickFormatter<number>",
+              "parameters": [
+                {
+                  "name": "value",
+                  "type": "T",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "yTickFormatter",
             "optional": true,
             "type": "CartesianChartProps.TickFormatter<number>",
@@ -2170,6 +2474,17 @@ A \`gridLayout\` is an array of breakpoint definitions. Each definition consists
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "(item: T) => string",
+              "parameters": [
+                {
+                  "name": "item",
+                  "type": "T",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "removeButtonAriaLabel",
             "optional": true,
             "type": "((item: T) => string)",
@@ -2440,6 +2755,220 @@ Instead, use \`onSelect\` in combination with the \`onChange\` handler only as a
         "name": "AutosuggestProps.SelectDetail",
         "properties": [
           {
+            "inlineType": {
+              "name": "OptionDefinition",
+              "properties": [
+                {
+                  "name": "__labelPrefix",
+                  "optional": true,
+                  "type": "string",
+                },
+                {
+                  "name": "description",
+                  "optional": true,
+                  "type": "string",
+                },
+                {
+                  "name": "disabled",
+                  "optional": true,
+                  "type": "boolean",
+                },
+                {
+                  "name": "disabledReason",
+                  "optional": true,
+                  "type": "string",
+                },
+                {
+                  "name": "filteringTags",
+                  "optional": true,
+                  "type": "ReadonlyArray<string>",
+                },
+                {
+                  "name": "iconAlt",
+                  "optional": true,
+                  "type": "string",
+                },
+                {
+                  "name": "iconAriaLabel",
+                  "optional": true,
+                  "type": "string",
+                },
+                {
+                  "inlineType": {
+                    "name": "IconProps.Name",
+                    "type": "union",
+                    "values": [
+                      "search",
+                      "map",
+                      "filter",
+                      "key",
+                      "file",
+                      "pause",
+                      "play",
+                      "remove",
+                      "copy",
+                      "menu",
+                      "script",
+                      "close",
+                      "status-pending",
+                      "refresh",
+                      "external",
+                      "group",
+                      "calendar",
+                      "ellipsis",
+                      "zoom-in",
+                      "zoom-out",
+                      "download",
+                      "security",
+                      "edit",
+                      "add-plus",
+                      "anchor-link",
+                      "angle-left-double",
+                      "angle-left",
+                      "angle-right-double",
+                      "angle-right",
+                      "angle-up",
+                      "angle-down",
+                      "arrow-left",
+                      "arrow-right",
+                      "arrow-up",
+                      "arrow-down",
+                      "audio-full",
+                      "audio-half",
+                      "audio-off",
+                      "backward-10-seconds",
+                      "bug",
+                      "call",
+                      "caret-down-filled",
+                      "caret-down",
+                      "caret-left-filled",
+                      "caret-right-filled",
+                      "caret-up-filled",
+                      "caret-up",
+                      "check",
+                      "contact",
+                      "closed-caption",
+                      "closed-caption-unavailable",
+                      "command-prompt",
+                      "delete-marker",
+                      "drag-indicator",
+                      "envelope",
+                      "exit-full-screen",
+                      "expand",
+                      "face-happy",
+                      "face-happy-filled",
+                      "face-neutral",
+                      "face-neutral-filled",
+                      "face-sad",
+                      "face-sad-filled",
+                      "file-open",
+                      "flag",
+                      "folder-open",
+                      "folder",
+                      "forward-10-seconds",
+                      "full-screen",
+                      "gen-ai",
+                      "globe",
+                      "grid-view",
+                      "group-active",
+                      "heart",
+                      "heart-filled",
+                      "insert-row",
+                      "keyboard",
+                      "list-view",
+                      "location-pin",
+                      "lock-private",
+                      "microphone",
+                      "microphone-off",
+                      "mini-player",
+                      "multiscreen",
+                      "notification",
+                      "redo",
+                      "resize-area",
+                      "settings",
+                      "send",
+                      "share",
+                      "shrink",
+                      "star-filled",
+                      "star-half",
+                      "star",
+                      "status-in-progress",
+                      "status-info",
+                      "status-negative",
+                      "status-positive",
+                      "status-stopped",
+                      "status-warning",
+                      "subtract-minus",
+                      "suggestions",
+                      "support",
+                      "thumbs-down-filled",
+                      "thumbs-down",
+                      "thumbs-up-filled",
+                      "thumbs-up",
+                      "ticket",
+                      "transcript",
+                      "treeview-collapse",
+                      "treeview-expand",
+                      "undo",
+                      "unlocked",
+                      "upload-download",
+                      "upload",
+                      "user-profile-active",
+                      "user-profile",
+                      "video-off",
+                      "video-on",
+                      "video-unavailable",
+                      "video-camera-off",
+                      "video-camera-on",
+                      "video-camera-unavailable",
+                      "view-full",
+                      "view-horizontal",
+                      "view-vertical",
+                      "zoom-to-fit",
+                    ],
+                  },
+                  "name": "iconName",
+                  "optional": true,
+                  "type": "string",
+                },
+                {
+                  "name": "iconSvg",
+                  "optional": true,
+                  "type": "React.ReactNode",
+                },
+                {
+                  "name": "iconUrl",
+                  "optional": true,
+                  "type": "string",
+                },
+                {
+                  "name": "label",
+                  "optional": true,
+                  "type": "string",
+                },
+                {
+                  "name": "labelTag",
+                  "optional": true,
+                  "type": "string",
+                },
+                {
+                  "name": "lang",
+                  "optional": true,
+                  "type": "string",
+                },
+                {
+                  "name": "tags",
+                  "optional": true,
+                  "type": "ReadonlyArray<string>",
+                },
+                {
+                  "name": "value",
+                  "optional": true,
+                  "type": "string",
+                },
+              ],
+              "type": "object",
+            },
             "name": "selectedOption",
             "optional": true,
             "type": "OptionDefinition",
@@ -2917,6 +3446,58 @@ use the \`id\` attribute, consider setting it on a parent element instead.",
 - \`root.color\` (string) - (Optional) Text color for badge.
 - \`root.paddingBlock\` (string) - (Optional) Block dimension padding.
 - \`root.paddingInline\` (string) - (Optional) Inline dimension padding.",
+      "inlineType": {
+        "name": "BadgeProps.Style",
+        "properties": [
+          {
+            "inlineType": {
+              "name": "object",
+              "properties": [
+                {
+                  "name": "background",
+                  "optional": true,
+                  "type": "string",
+                },
+                {
+                  "name": "borderColor",
+                  "optional": true,
+                  "type": "string",
+                },
+                {
+                  "name": "borderRadius",
+                  "optional": true,
+                  "type": "string",
+                },
+                {
+                  "name": "borderWidth",
+                  "optional": true,
+                  "type": "string",
+                },
+                {
+                  "name": "color",
+                  "optional": true,
+                  "type": "string",
+                },
+                {
+                  "name": "paddingBlock",
+                  "optional": true,
+                  "type": "string",
+                },
+                {
+                  "name": "paddingInline",
+                  "optional": true,
+                  "type": "string",
+                },
+              ],
+              "type": "object",
+            },
+            "name": "root",
+            "optional": true,
+            "type": "{ background?: string | undefined; borderColor?: string | undefined; borderRadius?: string | undefined; borderWidth?: string | undefined; color?: string | undefined; paddingBlock?: string | undefined; paddingInline?: string | undefined; }",
+          },
+        ],
+        "type": "object",
+      },
       "name": "style",
       "optional": true,
       "systemTags": [
@@ -2965,9 +3546,17 @@ This will **not** be called for any custom filter components you have defined in
         "name": "CartesianChartProps.HighlightChangeDetail<Series>",
         "properties": [
           {
+            "inlineType": {
+              "name": "NonNullable<Series>",
+              "type": "union",
+              "values": [
+                "Series",
+                "{}",
+              ],
+            },
             "name": "highlightedSeries",
             "optional": false,
-            "type": "Series | null",
+            "type": "NonNullable<Series>",
           },
         ],
         "type": "object",
@@ -3185,6 +3774,17 @@ This can only be used when the chart consists exclusively of bar series.",
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "CartesianChartProps.TickFormatter<T>",
+              "parameters": [
+                {
+                  "name": "value",
+                  "type": "T",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "xTickFormatter",
             "optional": true,
             "type": "CartesianChartProps.TickFormatter<T>",
@@ -3195,6 +3795,17 @@ This can only be used when the chart consists exclusively of bar series.",
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "CartesianChartProps.TickFormatter<number>",
+              "parameters": [
+                {
+                  "name": "value",
+                  "type": "T",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "yTickFormatter",
             "optional": true,
             "type": "CartesianChartProps.TickFormatter<number>",
@@ -3715,6 +4326,22 @@ exports[`Components definition for breadcrumb-group matches the snapshot: breadc
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "T",
+              "properties": [
+                {
+                  "name": "href",
+                  "optional": false,
+                  "type": "string",
+                },
+                {
+                  "name": "text",
+                  "optional": false,
+                  "type": "string",
+                },
+              ],
+              "type": "object",
+            },
             "name": "item",
             "optional": false,
             "type": "T",
@@ -3753,6 +4380,22 @@ without pressing modifier keys (that is, CTRL, ALT, SHIFT, META).",
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "T",
+              "properties": [
+                {
+                  "name": "href",
+                  "optional": false,
+                  "type": "string",
+                },
+                {
+                  "name": "text",
+                  "optional": false,
+                  "type": "string",
+                },
+              ],
+              "type": "object",
+            },
             "name": "item",
             "optional": false,
             "type": "T",
@@ -4297,6 +4940,162 @@ If the \`rel\` property is provided, it overrides the default behavior.",
 - \`root.focusRing.borderWidth\` (string) - (Optional) Focus ring border width.
 - \`root.paddingBlock\` (string) - (Optional) Block dimension padding.
 - \`root.paddingInline\` (string) - (Optional) Inline dimension padding.",
+      "inlineType": {
+        "name": "ButtonProps.Style",
+        "properties": [
+          {
+            "inlineType": {
+              "name": "object",
+              "properties": [
+                {
+                  "inlineType": {
+                    "name": "object",
+                    "properties": [
+                      {
+                        "name": "active",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "default",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "disabled",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "hover",
+                        "optional": true,
+                        "type": "string",
+                      },
+                    ],
+                    "type": "object",
+                  },
+                  "name": "background",
+                  "optional": true,
+                  "type": "{ active?: string | undefined; default?: string | undefined; disabled?: string | undefined; hover?: string | undefined; }",
+                },
+                {
+                  "inlineType": {
+                    "name": "object",
+                    "properties": [
+                      {
+                        "name": "active",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "default",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "disabled",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "hover",
+                        "optional": true,
+                        "type": "string",
+                      },
+                    ],
+                    "type": "object",
+                  },
+                  "name": "borderColor",
+                  "optional": true,
+                  "type": "{ active?: string | undefined; default?: string | undefined; disabled?: string | undefined; hover?: string | undefined; }",
+                },
+                {
+                  "name": "borderRadius",
+                  "optional": true,
+                  "type": "string",
+                },
+                {
+                  "name": "borderWidth",
+                  "optional": true,
+                  "type": "string",
+                },
+                {
+                  "inlineType": {
+                    "name": "object",
+                    "properties": [
+                      {
+                        "name": "active",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "default",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "disabled",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "hover",
+                        "optional": true,
+                        "type": "string",
+                      },
+                    ],
+                    "type": "object",
+                  },
+                  "name": "color",
+                  "optional": true,
+                  "type": "{ active?: string | undefined; default?: string | undefined; disabled?: string | undefined; hover?: string | undefined; }",
+                },
+                {
+                  "inlineType": {
+                    "name": "object",
+                    "properties": [
+                      {
+                        "name": "borderColor",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "borderRadius",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "borderWidth",
+                        "optional": true,
+                        "type": "string",
+                      },
+                    ],
+                    "type": "object",
+                  },
+                  "name": "focusRing",
+                  "optional": true,
+                  "type": "{ borderColor?: string | undefined; borderRadius?: string | undefined; borderWidth?: string | undefined; }",
+                },
+                {
+                  "name": "paddingBlock",
+                  "optional": true,
+                  "type": "string",
+                },
+                {
+                  "name": "paddingInline",
+                  "optional": true,
+                  "type": "string",
+                },
+              ],
+              "type": "object",
+            },
+            "name": "root",
+            "optional": true,
+            "type": "{ background?: { active?: string | undefined; default?: string | undefined; disabled?: string | undefined; hover?: string | undefined; } | undefined; borderColor?: { active?: string | undefined; default?: string | undefined; disabled?: string | undefined; hover?: string | undefined; } | undefined; ... 5 more ...; pa...",
+          },
+        ],
+        "type": "object",
+      },
       "name": "style",
       "optional": true,
       "systemTags": [
@@ -4636,6 +5435,15 @@ The main action also supports the following properties of the [button](/componen
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "string | boolean",
+              "type": "union",
+              "values": [
+                "string",
+                "false",
+                "true",
+              ],
+            },
             "name": "download",
             "optional": true,
             "type": "string | boolean",
@@ -4661,9 +5469,142 @@ The main action also supports the following properties of the [button](/componen
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "IconProps.Name",
+              "type": "union",
+              "values": [
+                "search",
+                "map",
+                "filter",
+                "key",
+                "file",
+                "pause",
+                "play",
+                "remove",
+                "copy",
+                "menu",
+                "script",
+                "close",
+                "status-pending",
+                "refresh",
+                "external",
+                "group",
+                "calendar",
+                "ellipsis",
+                "zoom-in",
+                "zoom-out",
+                "download",
+                "security",
+                "edit",
+                "add-plus",
+                "anchor-link",
+                "angle-left-double",
+                "angle-left",
+                "angle-right-double",
+                "angle-right",
+                "angle-up",
+                "angle-down",
+                "arrow-left",
+                "arrow-right",
+                "arrow-up",
+                "arrow-down",
+                "audio-full",
+                "audio-half",
+                "audio-off",
+                "backward-10-seconds",
+                "bug",
+                "call",
+                "caret-down-filled",
+                "caret-down",
+                "caret-left-filled",
+                "caret-right-filled",
+                "caret-up-filled",
+                "caret-up",
+                "check",
+                "contact",
+                "closed-caption",
+                "closed-caption-unavailable",
+                "command-prompt",
+                "delete-marker",
+                "drag-indicator",
+                "envelope",
+                "exit-full-screen",
+                "expand",
+                "face-happy",
+                "face-happy-filled",
+                "face-neutral",
+                "face-neutral-filled",
+                "face-sad",
+                "face-sad-filled",
+                "file-open",
+                "flag",
+                "folder-open",
+                "folder",
+                "forward-10-seconds",
+                "full-screen",
+                "gen-ai",
+                "globe",
+                "grid-view",
+                "group-active",
+                "heart",
+                "heart-filled",
+                "insert-row",
+                "keyboard",
+                "list-view",
+                "location-pin",
+                "lock-private",
+                "microphone",
+                "microphone-off",
+                "mini-player",
+                "multiscreen",
+                "notification",
+                "redo",
+                "resize-area",
+                "settings",
+                "send",
+                "share",
+                "shrink",
+                "star-filled",
+                "star-half",
+                "star",
+                "status-in-progress",
+                "status-info",
+                "status-negative",
+                "status-positive",
+                "status-stopped",
+                "status-warning",
+                "subtract-minus",
+                "suggestions",
+                "support",
+                "thumbs-down-filled",
+                "thumbs-down",
+                "thumbs-up-filled",
+                "thumbs-up",
+                "ticket",
+                "transcript",
+                "treeview-collapse",
+                "treeview-expand",
+                "undo",
+                "unlocked",
+                "upload-download",
+                "upload",
+                "user-profile-active",
+                "user-profile",
+                "video-off",
+                "video-on",
+                "video-unavailable",
+                "video-camera-off",
+                "video-camera-on",
+                "video-camera-unavailable",
+                "view-full",
+                "view-horizontal",
+                "view-vertical",
+                "zoom-to-fit",
+              ],
+            },
             "name": "iconName",
             "optional": true,
-            "type": "IconProps.Name",
+            "type": "string",
           },
           {
             "name": "iconSvg",
@@ -4686,11 +5627,33 @@ The main action also supports the following properties of the [button](/componen
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "CancelableEventHandler<ClickDetail>",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": "CustomEvent<Detail>",
+                },
+              ],
+              "returnType": "void",
+              "type": "function",
+            },
             "name": "onClick",
             "optional": true,
             "type": "CancelableEventHandler<ClickDetail>",
           },
           {
+            "inlineType": {
+              "name": "CancelableEventHandler<BaseNavigationDetail>",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": "CustomEvent<Detail>",
+                },
+              ],
+              "returnType": "void",
+              "type": "function",
+            },
             "name": "onFollow",
             "optional": true,
             "type": "CancelableEventHandler<BaseNavigationDetail>",
@@ -5197,6 +6160,21 @@ add a meaningful description to the whole selection.",
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "(data: CardsProps.SelectionState<T>, row: T) => string",
+              "parameters": [
+                {
+                  "name": "data",
+                  "type": "CardsProps.SelectionState<T>",
+                },
+                {
+                  "name": "row",
+                  "type": "T",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "itemSelectionLabel",
             "optional": false,
             "type": "(data: CardsProps.SelectionState<T>, row: T) => string",
@@ -5231,6 +6209,17 @@ All of the above properties are optional.",
         "name": "CardsProps.CardDefinition<T>",
         "properties": [
           {
+            "inlineType": {
+              "name": "(item: T) => React.ReactNode",
+              "parameters": [
+                {
+                  "name": "item",
+                  "type": "T",
+                },
+              ],
+              "returnType": "React.ReactNode",
+              "type": "function",
+            },
             "name": "header",
             "optional": true,
             "type": "((item: T) => React.ReactNode)",
@@ -5747,9 +6736,55 @@ The event \`detail\` contains the value of all the preferences as submitted by t
         "name": "CodeEditorProps.Preferences",
         "properties": [
           {
+            "inlineType": {
+              "name": "CodeEditorProps.Theme",
+              "type": "union",
+              "values": [
+                "terminal",
+                "sqlserver",
+                "chrome",
+                "clouds",
+                "crimson_editor",
+                "dawn",
+                "dreamweaver",
+                "eclipse",
+                "github",
+                "iplastic",
+                "solarized_light",
+                "textmate",
+                "tomorrow",
+                "xcode",
+                "kuroir",
+                "katzenmilch",
+                "cloud_editor",
+                "ambiance",
+                "chaos",
+                "clouds_midnight",
+                "dracula",
+                "cobalt",
+                "gruvbox",
+                "gob",
+                "idle_fingers",
+                "kr_theme",
+                "merbivore",
+                "merbivore_soft",
+                "mono_industrial",
+                "monokai",
+                "nord_dark",
+                "pastel_on_dark",
+                "solarized_dark",
+                "tomorrow_night",
+                "tomorrow_night_blue",
+                "tomorrow_night_bright",
+                "tomorrow_night_eighties",
+                "twilight",
+                "vibrant_ink",
+                "cloud_editor_dark",
+              ],
+            },
             "name": "theme",
             "optional": false,
-            "type": "CodeEditorProps.Theme",
+            "type": "string",
           },
           {
             "name": "wrapLines",
@@ -5882,6 +6917,21 @@ The object should contain, among others:
         "name": "CodeEditorProps.I18nStrings",
         "properties": [
           {
+            "inlineType": {
+              "name": "(row: number, column: number) => string",
+              "parameters": [
+                {
+                  "name": "row",
+                  "type": "number",
+                },
+                {
+                  "name": "column",
+                  "type": "number",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "cursorPosition",
             "optional": true,
             "type": "((row: number, column: number) => string)",
@@ -6220,9 +7270,55 @@ You can use any theme provided by Ace.",
         "name": "Partial<CodeEditorProps.Preferences>",
         "properties": [
           {
+            "inlineType": {
+              "name": "CodeEditorProps.Theme",
+              "type": "union",
+              "values": [
+                "terminal",
+                "sqlserver",
+                "chrome",
+                "clouds",
+                "crimson_editor",
+                "dawn",
+                "dreamweaver",
+                "eclipse",
+                "github",
+                "iplastic",
+                "solarized_light",
+                "textmate",
+                "tomorrow",
+                "xcode",
+                "kuroir",
+                "katzenmilch",
+                "cloud_editor",
+                "ambiance",
+                "chaos",
+                "clouds_midnight",
+                "dracula",
+                "cobalt",
+                "gruvbox",
+                "gob",
+                "idle_fingers",
+                "kr_theme",
+                "merbivore",
+                "merbivore_soft",
+                "mono_industrial",
+                "monokai",
+                "nord_dark",
+                "pastel_on_dark",
+                "solarized_dark",
+                "tomorrow_night",
+                "tomorrow_night_blue",
+                "tomorrow_night_bright",
+                "tomorrow_night_eighties",
+                "twilight",
+                "vibrant_ink",
+                "cloud_editor_dark",
+              ],
+            },
             "name": "theme",
             "optional": false,
-            "type": "CodeEditorProps.Theme",
+            "type": "string",
           },
           {
             "name": "wrapLines",
@@ -6319,9 +7415,17 @@ The values for all configured preferences are present even if the user didn't ch
         "name": "CollectionPreferencesProps.Preferences<CustomPreferenceType>",
         "properties": [
           {
+            "inlineType": {
+              "name": ""compact" | "comfortable"",
+              "type": "union",
+              "values": [
+                "compact",
+                "comfortable",
+              ],
+            },
             "name": "contentDensity",
             "optional": true,
-            "type": ""compact" | "comfortable"",
+            "type": "string",
           },
           {
             "name": "contentDisplay",
@@ -6329,9 +7433,17 @@ The values for all configured preferences are present even if the user didn't ch
             "type": "ReadonlyArray<CollectionPreferencesProps.ContentDisplayItem>",
           },
           {
+            "inlineType": {
+              "name": "NonNullable<CustomPreferenceType>",
+              "type": "union",
+              "values": [
+                "CustomPreferenceType",
+                "{}",
+              ],
+            },
             "name": "custom",
             "optional": true,
-            "type": "CustomPreferenceType",
+            "type": "NonNullable<CustomPreferenceType>",
           },
           {
             "name": "pageSize",
@@ -6339,6 +7451,22 @@ The values for all configured preferences are present even if the user didn't ch
             "type": "number",
           },
           {
+            "inlineType": {
+              "name": "StickyColumns",
+              "properties": [
+                {
+                  "name": "first",
+                  "optional": true,
+                  "type": "number",
+                },
+                {
+                  "name": "last",
+                  "optional": true,
+                  "type": "number",
+                },
+              ],
+              "type": "object",
+            },
             "name": "stickyColumns",
             "optional": true,
             "type": "StickyColumns",
@@ -6479,6 +7607,48 @@ You must provide an ordered list of the items to display in the \`preferences.co
             "type": "boolean",
           },
           {
+            "inlineType": {
+              "name": "CollectionPreferencesProps.ContentDisplayPreferenceI18nStrings",
+              "properties": [
+                {
+                  "name": "columnFilteringAriaLabel",
+                  "optional": true,
+                  "type": "string",
+                },
+                {
+                  "name": "columnFilteringClearFilterText",
+                  "optional": true,
+                  "type": "string",
+                },
+                {
+                  "inlineType": {
+                    "name": "(count: number) => string",
+                    "parameters": [
+                      {
+                        "name": "count",
+                        "type": "number",
+                      },
+                    ],
+                    "returnType": "string",
+                    "type": "function",
+                  },
+                  "name": "columnFilteringCountText",
+                  "optional": true,
+                  "type": "((count: number) => string)",
+                },
+                {
+                  "name": "columnFilteringNoMatchText",
+                  "optional": true,
+                  "type": "string",
+                },
+                {
+                  "name": "columnFilteringPlaceholder",
+                  "optional": true,
+                  "type": "string",
+                },
+              ],
+              "type": "object",
+            },
             "name": "i18nStrings",
             "optional": true,
             "type": "CollectionPreferencesProps.ContentDisplayPreferenceI18nStrings",
@@ -6489,16 +7659,69 @@ You must provide an ordered list of the items to display in the \`preferences.co
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "(initialPosition: number, finalPosition: number, total: number) => string",
+              "parameters": [
+                {
+                  "name": "initialPosition",
+                  "type": "number",
+                },
+                {
+                  "name": "finalPosition",
+                  "type": "number",
+                },
+                {
+                  "name": "total",
+                  "type": "number",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "liveAnnouncementDndItemCommitted",
             "optional": true,
             "type": "((initialPosition: number, finalPosition: number, total: number) => string)",
           },
           {
+            "inlineType": {
+              "name": "(initialPosition: number, currentPosition: number, total: number) => string",
+              "parameters": [
+                {
+                  "name": "initialPosition",
+                  "type": "number",
+                },
+                {
+                  "name": "currentPosition",
+                  "type": "number",
+                },
+                {
+                  "name": "total",
+                  "type": "number",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "liveAnnouncementDndItemReordered",
             "optional": true,
             "type": "((initialPosition: number, currentPosition: number, total: number) => string)",
           },
           {
+            "inlineType": {
+              "name": "(position: number, total: number) => string",
+              "parameters": [
+                {
+                  "name": "position",
+                  "type": "number",
+                },
+                {
+                  "name": "total",
+                  "type": "number",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "liveAnnouncementDndStarted",
             "optional": true,
             "type": "((position: number, total: number) => string)",
@@ -6634,9 +7857,17 @@ It contains the following:
         "name": "CollectionPreferencesProps.Preferences<CustomPreferenceType>",
         "properties": [
           {
+            "inlineType": {
+              "name": ""compact" | "comfortable"",
+              "type": "union",
+              "values": [
+                "compact",
+                "comfortable",
+              ],
+            },
             "name": "contentDensity",
             "optional": true,
-            "type": ""compact" | "comfortable"",
+            "type": "string",
           },
           {
             "name": "contentDisplay",
@@ -6644,9 +7875,17 @@ It contains the following:
             "type": "ReadonlyArray<CollectionPreferencesProps.ContentDisplayItem>",
           },
           {
+            "inlineType": {
+              "name": "NonNullable<CustomPreferenceType>",
+              "type": "union",
+              "values": [
+                "CustomPreferenceType",
+                "{}",
+              ],
+            },
             "name": "custom",
             "optional": true,
-            "type": "CustomPreferenceType",
+            "type": "NonNullable<CustomPreferenceType>",
           },
           {
             "name": "pageSize",
@@ -6654,6 +7893,22 @@ It contains the following:
             "type": "number",
           },
           {
+            "inlineType": {
+              "name": "StickyColumns",
+              "properties": [
+                {
+                  "name": "first",
+                  "optional": true,
+                  "type": "number",
+                },
+                {
+                  "name": "last",
+                  "optional": true,
+                  "type": "number",
+                },
+              ],
+              "type": "object",
+            },
             "name": "stickyColumns",
             "optional": true,
             "type": "StickyColumns",
@@ -6713,11 +7968,53 @@ You must set the current value in the \`preferences.stickyColumns\` property.",
         "name": "CollectionPreferencesProps.StickyColumnsPreference",
         "properties": [
           {
+            "inlineType": {
+              "name": "StickyColumnPreference",
+              "properties": [
+                {
+                  "name": "description",
+                  "optional": false,
+                  "type": "string",
+                },
+                {
+                  "name": "options",
+                  "optional": false,
+                  "type": "ReadonlyArray<{ label: string; value: number; }>",
+                },
+                {
+                  "name": "title",
+                  "optional": false,
+                  "type": "string",
+                },
+              ],
+              "type": "object",
+            },
             "name": "firstColumns",
             "optional": true,
             "type": "StickyColumnPreference",
           },
           {
+            "inlineType": {
+              "name": "StickyColumnPreference",
+              "properties": [
+                {
+                  "name": "description",
+                  "optional": false,
+                  "type": "string",
+                },
+                {
+                  "name": "options",
+                  "optional": false,
+                  "type": "ReadonlyArray<{ label: string; value: number; }>",
+                },
+                {
+                  "name": "title",
+                  "optional": false,
+                  "type": "string",
+                },
+              ],
+              "type": "object",
+            },
             "name": "lastColumns",
             "optional": true,
             "type": "StickyColumnPreference",
@@ -7048,16 +8345,40 @@ If no height is provided, the media slot will be displayed at its full height.",
             "type": "React.ReactNode",
           },
           {
+            "inlineType": {
+              "name": "string | number",
+              "type": "union",
+              "values": [
+                "string",
+                "number",
+              ],
+            },
             "name": "height",
             "optional": true,
             "type": "string | number",
           },
           {
+            "inlineType": {
+              "name": ""top" | "side"",
+              "type": "union",
+              "values": [
+                "top",
+                "side",
+              ],
+            },
             "name": "position",
             "optional": true,
-            "type": ""top" | "side"",
+            "type": "string",
           },
           {
+            "inlineType": {
+              "name": "string | number",
+              "type": "union",
+              "values": [
+                "string",
+                "number",
+              ],
+            },
             "name": "width",
             "optional": true,
             "type": "string | number",
@@ -7917,9 +9238,17 @@ The event \`detail\` contains the current value of the field.",
         "name": "DateRangePickerProps.ChangeDetail",
         "properties": [
           {
+            "inlineType": {
+              "name": "DateRangePickerProps.Value",
+              "type": "union",
+              "values": [
+                "DateRangePickerProps.AbsoluteValue",
+                "DateRangePickerProps.RelativeValue",
+              ],
+            },
             "name": "value",
             "optional": false,
-            "type": "DateRangePickerProps.Value | null",
+            "type": "DateRangePickerProps.Value",
           },
         ],
         "type": "object",
@@ -8238,11 +9567,37 @@ Defaults to \`false\`.",
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "(value: DateRangePickerProps.RelativeValue) => string",
+              "parameters": [
+                {
+                  "name": "value",
+                  "type": "DateRangePickerProps.RelativeValue",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "formatRelativeRange",
             "optional": true,
             "type": "((value: DateRangePickerProps.RelativeValue) => string)",
           },
           {
+            "inlineType": {
+              "name": "(unit: DateRangePickerProps.TimeUnit, value: number) => string",
+              "parameters": [
+                {
+                  "name": "unit",
+                  "type": "DateRangePickerProps.TimeUnit",
+                },
+                {
+                  "name": "value",
+                  "type": "number",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "formatUnit",
             "optional": true,
             "type": "((unit: DateRangePickerProps.TimeUnit, value: number) => string)",
@@ -8293,6 +9648,21 @@ Defaults to \`false\`.",
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "(startDate: string, endDate: string) => string",
+              "parameters": [
+                {
+                  "name": "startDate",
+                  "type": "string",
+                },
+                {
+                  "name": "endDate",
+                  "type": "string",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "renderSelectedAbsoluteRangeAriaLive",
             "optional": true,
             "type": "((startDate: string, endDate: string) => string)",
@@ -9046,11 +10416,33 @@ Make sure that you add a listener to this event to update your application state
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "(date: Date) => string",
+              "parameters": [
+                {
+                  "name": "date",
+                  "type": "Date",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "formatFileLastModified",
             "optional": true,
             "type": "((date: Date) => string)",
           },
           {
+            "inlineType": {
+              "name": "(sizeInBytes: number) => string",
+              "parameters": [
+                {
+                  "name": "sizeInBytes",
+                  "type": "number",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "formatFileSize",
             "optional": true,
             "type": "((sizeInBytes: number) => string)",
@@ -9066,6 +10458,17 @@ Make sure that you add a listener to this event to update your application state
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "(fileIndex: number) => string",
+              "parameters": [
+                {
+                  "name": "fileIndex",
+                  "type": "number",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "removeFileAriaLabel",
             "optional": true,
             "type": "((fileIndex: number) => string)",
@@ -9282,6 +10685,17 @@ is provided by its parent form field component.",
         "name": "FileUploadProps.I18nStrings",
         "properties": [
           {
+            "inlineType": {
+              "name": "(multiple: boolean) => string",
+              "parameters": [
+                {
+                  "name": "multiple",
+                  "type": "boolean",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "dropzoneText",
             "optional": true,
             "type": "((multiple: boolean) => string)",
@@ -9292,11 +10706,33 @@ is provided by its parent form field component.",
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "(date: Date) => string",
+              "parameters": [
+                {
+                  "name": "date",
+                  "type": "Date",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "formatFileLastModified",
             "optional": true,
             "type": "((date: Date) => string)",
           },
           {
+            "inlineType": {
+              "name": "(sizeInBytes: number) => string",
+              "parameters": [
+                {
+                  "name": "sizeInBytes",
+                  "type": "number",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "formatFileSize",
             "optional": true,
             "type": "((sizeInBytes: number) => string)",
@@ -9312,11 +10748,33 @@ is provided by its parent form field component.",
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "(fileIndex: number) => string",
+              "parameters": [
+                {
+                  "name": "fileIndex",
+                  "type": "number",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "removeFileAriaLabel",
             "optional": true,
             "type": "((fileIndex: number) => string)",
           },
           {
+            "inlineType": {
+              "name": "(multiple: boolean) => string",
+              "parameters": [
+                {
+                  "name": "multiple",
+                  "type": "boolean",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "uploadButtonText",
             "optional": true,
             "type": "((multiple: boolean) => string)",
@@ -9564,6 +11022,543 @@ If the \`action\` property is set, this property is ignored. **Deprecated**, rep
 - \`notificationBar.expandButton.focusRing.borderColor\` (string) - (Optional) Border color for the expand button.
 - \`notificationBar.expandButton.focusRing.borderRadius\` (string) - (Optional) Border radius for the expand button.
 - \`notificationBar.expandButton.focusRing.borderWidth\` (string) - (Optional) Border width for the expand button.",
+      "inlineType": {
+        "name": "FlashbarProps.Style",
+        "properties": [
+          {
+            "inlineType": {
+              "name": "object",
+              "properties": [
+                {
+                  "inlineType": {
+                    "name": "object",
+                    "properties": [
+                      {
+                        "inlineType": {
+                          "name": "object",
+                          "properties": [
+                            {
+                              "inlineType": {
+                                "name": "object",
+                                "properties": [
+                                  {
+                                    "name": "error",
+                                    "optional": true,
+                                    "type": "string",
+                                  },
+                                  {
+                                    "name": "info",
+                                    "optional": true,
+                                    "type": "string",
+                                  },
+                                  {
+                                    "name": "inProgress",
+                                    "optional": true,
+                                    "type": "string",
+                                  },
+                                  {
+                                    "name": "success",
+                                    "optional": true,
+                                    "type": "string",
+                                  },
+                                  {
+                                    "name": "warning",
+                                    "optional": true,
+                                    "type": "string",
+                                  },
+                                ],
+                                "type": "object",
+                              },
+                              "name": "active",
+                              "optional": true,
+                              "type": "{ error?: string | undefined; info?: string | undefined; inProgress?: string | undefined; success?: string | undefined; warning?: string | undefined; }",
+                            },
+                            {
+                              "inlineType": {
+                                "name": "object",
+                                "properties": [
+                                  {
+                                    "name": "error",
+                                    "optional": true,
+                                    "type": "string",
+                                  },
+                                  {
+                                    "name": "info",
+                                    "optional": true,
+                                    "type": "string",
+                                  },
+                                  {
+                                    "name": "inProgress",
+                                    "optional": true,
+                                    "type": "string",
+                                  },
+                                  {
+                                    "name": "success",
+                                    "optional": true,
+                                    "type": "string",
+                                  },
+                                  {
+                                    "name": "warning",
+                                    "optional": true,
+                                    "type": "string",
+                                  },
+                                ],
+                                "type": "object",
+                              },
+                              "name": "default",
+                              "optional": true,
+                              "type": "{ error?: string | undefined; info?: string | undefined; inProgress?: string | undefined; success?: string | undefined; warning?: string | undefined; }",
+                            },
+                            {
+                              "inlineType": {
+                                "name": "object",
+                                "properties": [
+                                  {
+                                    "name": "error",
+                                    "optional": true,
+                                    "type": "string",
+                                  },
+                                  {
+                                    "name": "info",
+                                    "optional": true,
+                                    "type": "string",
+                                  },
+                                  {
+                                    "name": "inProgress",
+                                    "optional": true,
+                                    "type": "string",
+                                  },
+                                  {
+                                    "name": "success",
+                                    "optional": true,
+                                    "type": "string",
+                                  },
+                                  {
+                                    "name": "warning",
+                                    "optional": true,
+                                    "type": "string",
+                                  },
+                                ],
+                                "type": "object",
+                              },
+                              "name": "hover",
+                              "optional": true,
+                              "type": "{ error?: string | undefined; info?: string | undefined; inProgress?: string | undefined; success?: string | undefined; warning?: string | undefined; }",
+                            },
+                          ],
+                          "type": "object",
+                        },
+                        "name": "color",
+                        "optional": true,
+                        "type": "{ active?: { error?: string | undefined; info?: string | undefined; inProgress?: string | undefined; success?: string | undefined; warning?: string | undefined; } | undefined; default?: { ...; } | undefined; hover?: { ...; } | undefined; }",
+                      },
+                      {
+                        "inlineType": {
+                          "name": "object",
+                          "properties": [
+                            {
+                              "inlineType": {
+                                "name": "object",
+                                "properties": [
+                                  {
+                                    "name": "error",
+                                    "optional": true,
+                                    "type": "string",
+                                  },
+                                  {
+                                    "name": "info",
+                                    "optional": true,
+                                    "type": "string",
+                                  },
+                                  {
+                                    "name": "inProgress",
+                                    "optional": true,
+                                    "type": "string",
+                                  },
+                                  {
+                                    "name": "success",
+                                    "optional": true,
+                                    "type": "string",
+                                  },
+                                  {
+                                    "name": "warning",
+                                    "optional": true,
+                                    "type": "string",
+                                  },
+                                ],
+                                "type": "object",
+                              },
+                              "name": "borderColor",
+                              "optional": true,
+                              "type": "{ error?: string | undefined; info?: string | undefined; inProgress?: string | undefined; success?: string | undefined; warning?: string | undefined; }",
+                            },
+                            {
+                              "name": "borderRadius",
+                              "optional": true,
+                              "type": "string",
+                            },
+                            {
+                              "name": "borderWidth",
+                              "optional": true,
+                              "type": "string",
+                            },
+                          ],
+                          "type": "object",
+                        },
+                        "name": "focusRing",
+                        "optional": true,
+                        "type": "{ borderColor?: { error?: string | undefined; info?: string | undefined; inProgress?: string | undefined; success?: string | undefined; warning?: string | undefined; } | undefined; borderRadius?: string | undefined; borderWidth?: string | undefined; }",
+                      },
+                    ],
+                    "type": "object",
+                  },
+                  "name": "dismissButton",
+                  "optional": true,
+                  "type": "{ color?: { active?: { error?: string | undefined; info?: string | undefined; inProgress?: string | undefined; success?: string | undefined; warning?: string | undefined; } | undefined; default?: { ...; } | undefined; hover?: { ...; } | undefined; } | undefined; focusRing?: { ...; } | undefined; }",
+                },
+                {
+                  "inlineType": {
+                    "name": "object",
+                    "properties": [
+                      {
+                        "inlineType": {
+                          "name": "object",
+                          "properties": [
+                            {
+                              "name": "error",
+                              "optional": true,
+                              "type": "string",
+                            },
+                            {
+                              "name": "info",
+                              "optional": true,
+                              "type": "string",
+                            },
+                            {
+                              "name": "inProgress",
+                              "optional": true,
+                              "type": "string",
+                            },
+                            {
+                              "name": "success",
+                              "optional": true,
+                              "type": "string",
+                            },
+                            {
+                              "name": "warning",
+                              "optional": true,
+                              "type": "string",
+                            },
+                          ],
+                          "type": "object",
+                        },
+                        "name": "background",
+                        "optional": true,
+                        "type": "{ error?: string | undefined; info?: string | undefined; inProgress?: string | undefined; success?: string | undefined; warning?: string | undefined; }",
+                      },
+                      {
+                        "inlineType": {
+                          "name": "object",
+                          "properties": [
+                            {
+                              "name": "error",
+                              "optional": true,
+                              "type": "string",
+                            },
+                            {
+                              "name": "info",
+                              "optional": true,
+                              "type": "string",
+                            },
+                            {
+                              "name": "inProgress",
+                              "optional": true,
+                              "type": "string",
+                            },
+                            {
+                              "name": "success",
+                              "optional": true,
+                              "type": "string",
+                            },
+                            {
+                              "name": "warning",
+                              "optional": true,
+                              "type": "string",
+                            },
+                          ],
+                          "type": "object",
+                        },
+                        "name": "borderColor",
+                        "optional": true,
+                        "type": "{ error?: string | undefined; info?: string | undefined; inProgress?: string | undefined; success?: string | undefined; warning?: string | undefined; }",
+                      },
+                      {
+                        "name": "borderRadius",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "borderWidth",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "inlineType": {
+                          "name": "object",
+                          "properties": [
+                            {
+                              "name": "error",
+                              "optional": true,
+                              "type": "string",
+                            },
+                            {
+                              "name": "info",
+                              "optional": true,
+                              "type": "string",
+                            },
+                            {
+                              "name": "inProgress",
+                              "optional": true,
+                              "type": "string",
+                            },
+                            {
+                              "name": "success",
+                              "optional": true,
+                              "type": "string",
+                            },
+                            {
+                              "name": "warning",
+                              "optional": true,
+                              "type": "string",
+                            },
+                          ],
+                          "type": "object",
+                        },
+                        "name": "color",
+                        "optional": true,
+                        "type": "{ error?: string | undefined; info?: string | undefined; inProgress?: string | undefined; success?: string | undefined; warning?: string | undefined; }",
+                      },
+                      {
+                        "inlineType": {
+                          "name": "object",
+                          "properties": [
+                            {
+                              "inlineType": {
+                                "name": "object",
+                                "properties": [
+                                  {
+                                    "name": "error",
+                                    "optional": true,
+                                    "type": "string",
+                                  },
+                                  {
+                                    "name": "info",
+                                    "optional": true,
+                                    "type": "string",
+                                  },
+                                  {
+                                    "name": "inProgress",
+                                    "optional": true,
+                                    "type": "string",
+                                  },
+                                  {
+                                    "name": "success",
+                                    "optional": true,
+                                    "type": "string",
+                                  },
+                                  {
+                                    "name": "warning",
+                                    "optional": true,
+                                    "type": "string",
+                                  },
+                                ],
+                                "type": "object",
+                              },
+                              "name": "borderColor",
+                              "optional": true,
+                              "type": "{ error?: string | undefined; info?: string | undefined; inProgress?: string | undefined; success?: string | undefined; warning?: string | undefined; }",
+                            },
+                            {
+                              "name": "borderRadius",
+                              "optional": true,
+                              "type": "string",
+                            },
+                            {
+                              "name": "borderWidth",
+                              "optional": true,
+                              "type": "string",
+                            },
+                          ],
+                          "type": "object",
+                        },
+                        "name": "focusRing",
+                        "optional": true,
+                        "type": "{ borderColor?: { error?: string | undefined; info?: string | undefined; inProgress?: string | undefined; success?: string | undefined; warning?: string | undefined; } | undefined; borderRadius?: string | undefined; borderWidth?: string | undefined; }",
+                      },
+                    ],
+                    "type": "object",
+                  },
+                  "name": "root",
+                  "optional": true,
+                  "type": "{ background?: { error?: string | undefined; info?: string | undefined; inProgress?: string | undefined; success?: string | undefined; warning?: string | undefined; } | undefined; ... 4 more ...; focusRing?: { ...; } | undefined; }",
+                },
+              ],
+              "type": "object",
+            },
+            "name": "item",
+            "optional": true,
+            "type": "{ root?: { background?: { error?: string | undefined; info?: string | undefined; inProgress?: string | undefined; success?: string | undefined; warning?: string | undefined; } | undefined; ... 4 more ...; focusRing?: { ...; } | undefined; } | undefined; dismissButton?: { ...; } | undefined; }",
+          },
+          {
+            "inlineType": {
+              "name": "object",
+              "properties": [
+                {
+                  "inlineType": {
+                    "name": "object",
+                    "properties": [
+                      {
+                        "inlineType": {
+                          "name": "object",
+                          "properties": [
+                            {
+                              "name": "borderColor",
+                              "optional": true,
+                              "type": "string",
+                            },
+                            {
+                              "name": "borderRadius",
+                              "optional": true,
+                              "type": "string",
+                            },
+                            {
+                              "name": "borderWidth",
+                              "optional": true,
+                              "type": "string",
+                            },
+                          ],
+                          "type": "object",
+                        },
+                        "name": "focusRing",
+                        "optional": true,
+                        "type": "{ borderColor?: string | undefined; borderRadius?: string | undefined; borderWidth?: string | undefined; }",
+                      },
+                    ],
+                    "type": "object",
+                  },
+                  "name": "expandButton",
+                  "optional": true,
+                  "type": "{ focusRing?: { borderColor?: string | undefined; borderRadius?: string | undefined; borderWidth?: string | undefined; } | undefined; }",
+                },
+                {
+                  "inlineType": {
+                    "name": "object",
+                    "properties": [
+                      {
+                        "inlineType": {
+                          "name": "{ active?: string | undefined; default?: string | undefined; hover?: string | undefined; }",
+                          "properties": [
+                            {
+                              "name": "active",
+                              "optional": true,
+                              "type": "string",
+                            },
+                            {
+                              "name": "default",
+                              "optional": true,
+                              "type": "string",
+                            },
+                            {
+                              "name": "hover",
+                              "optional": true,
+                              "type": "string",
+                            },
+                          ],
+                          "type": "object",
+                        },
+                        "name": "background",
+                        "optional": true,
+                        "type": "{ active?: string | undefined; default?: string | undefined; hover?: string | undefined; }",
+                      },
+                      {
+                        "inlineType": {
+                          "name": "{ active?: string | undefined; default?: string | undefined; hover?: string | undefined; }",
+                          "properties": [
+                            {
+                              "name": "active",
+                              "optional": true,
+                              "type": "string",
+                            },
+                            {
+                              "name": "default",
+                              "optional": true,
+                              "type": "string",
+                            },
+                            {
+                              "name": "hover",
+                              "optional": true,
+                              "type": "string",
+                            },
+                          ],
+                          "type": "object",
+                        },
+                        "name": "borderColor",
+                        "optional": true,
+                        "type": "{ active?: string | undefined; default?: string | undefined; hover?: string | undefined; }",
+                      },
+                      {
+                        "name": "borderRadius",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "borderWidth",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "inlineType": {
+                          "name": "{ active?: string | undefined; default?: string | undefined; hover?: string | undefined; }",
+                          "properties": [
+                            {
+                              "name": "active",
+                              "optional": true,
+                              "type": "string",
+                            },
+                            {
+                              "name": "default",
+                              "optional": true,
+                              "type": "string",
+                            },
+                            {
+                              "name": "hover",
+                              "optional": true,
+                              "type": "string",
+                            },
+                          ],
+                          "type": "object",
+                        },
+                        "name": "color",
+                        "optional": true,
+                        "type": "{ active?: string | undefined; default?: string | undefined; hover?: string | undefined; }",
+                      },
+                    ],
+                    "type": "object",
+                  },
+                  "name": "root",
+                  "optional": true,
+                  "type": "{ background?: { active?: string | undefined; default?: string | undefined; hover?: string | undefined; } | undefined; borderColor?: { active?: string | undefined; default?: string | undefined; hover?: string | undefined; } | undefined; borderRadius?: string | undefined; borderWidth?: string | undefined; color?: { ....",
+                },
+              ],
+              "type": "object",
+            },
+            "name": "notificationBar",
+            "optional": true,
+            "type": "{ root?: { background?: { active?: string | undefined; default?: string | undefined; hover?: string | undefined; } | undefined; borderColor?: { active?: string | undefined; default?: string | undefined; hover?: string | undefined; } | undefined; borderRadius?: string | undefined; borderWidth?: string | undefined; co...",
+          },
+        ],
+        "type": "object",
+      },
       "name": "style",
       "optional": true,
       "systemTags": [
@@ -9595,14 +11590,82 @@ exports[`Components definition for form matches the snapshot: form 1`] = `
         "name": "FormProps.AnalyticsMetadata",
         "properties": [
           {
+            "inlineType": {
+              "name": "ErrorContext",
+              "properties": [
+                {
+                  "inlineType": {
+                    "name": "ErrorCategory",
+                    "type": "union",
+                    "values": [
+                      "OTHER",
+                      "INPUT_VALIDATION",
+                      "PERMISSION_IAM",
+                      "RESOURCE_AVAILABILITY",
+                      "NETWORK_CONNECTIVITY",
+                      "SERVICE_QUOTAS_LIMITS",
+                      "CONFIGURATION_CONFLICTS",
+                      "API_SPECIFIC",
+                    ],
+                  },
+                  "name": "errorCategory",
+                  "optional": false,
+                  "type": "string",
+                },
+                {
+                  "name": "errorMessage",
+                  "optional": false,
+                  "type": "string",
+                },
+                {
+                  "inlineType": {
+                    "name": "ErrorSubCategory",
+                    "type": "union",
+                    "values": [
+                      "DATA_FORMAT_ISSUES",
+                      "PARAMETER_VALIDATION_ISSUES",
+                      "ACCESS_CONTROL_ISSUES",
+                      "IDENTITY_MANAGEMENT_PROBLEMS",
+                      "RESOURCE_STATE_ISSUES",
+                      "RESOURCE_CAPACITY_PROBLEMS",
+                      "CONNECTION_PROBLEMS",
+                      "NETWORK_CONFIGURATION_ISSUES",
+                      "RESOURCE_LIMIT_EXCEEDED",
+                      "SERVICE_QUOTA_RESTRICTIONS",
+                      "SERVICE_INTEGRATION_CONFLICTS",
+                      "RESOURCE_CONFIGURATION_MISMATCHES",
+                      "SERVICE_SPECIFIC_OPERATIONS",
+                      "API_REQUEST_PROBLEMS",
+                      "OTHER",
+                    ],
+                  },
+                  "name": "errorSubCategory",
+                  "optional": false,
+                  "type": "string",
+                },
+              ],
+              "type": "object",
+            },
             "name": "errorContext",
             "optional": true,
             "type": "ErrorContext",
           },
           {
+            "inlineType": {
+              "name": "FlowType",
+              "type": "union",
+              "values": [
+                "create",
+                "edit",
+                "delete",
+                "home",
+                "dashboard",
+                "view-resource",
+              ],
+            },
             "name": "flowType",
             "optional": true,
-            "type": "FlowType",
+            "type": "string",
           },
           {
             "name": "instanceIdentifier",
@@ -9710,6 +11773,62 @@ exports[`Components definition for form-field matches the snapshot: form-field 1
         "name": "FormFieldProps.AnalyticsMetadata",
         "properties": [
           {
+            "inlineType": {
+              "name": "ErrorContext",
+              "properties": [
+                {
+                  "inlineType": {
+                    "name": "ErrorCategory",
+                    "type": "union",
+                    "values": [
+                      "OTHER",
+                      "INPUT_VALIDATION",
+                      "PERMISSION_IAM",
+                      "RESOURCE_AVAILABILITY",
+                      "NETWORK_CONNECTIVITY",
+                      "SERVICE_QUOTAS_LIMITS",
+                      "CONFIGURATION_CONFLICTS",
+                      "API_SPECIFIC",
+                    ],
+                  },
+                  "name": "errorCategory",
+                  "optional": false,
+                  "type": "string",
+                },
+                {
+                  "name": "errorMessage",
+                  "optional": false,
+                  "type": "string",
+                },
+                {
+                  "inlineType": {
+                    "name": "ErrorSubCategory",
+                    "type": "union",
+                    "values": [
+                      "DATA_FORMAT_ISSUES",
+                      "PARAMETER_VALIDATION_ISSUES",
+                      "ACCESS_CONTROL_ISSUES",
+                      "IDENTITY_MANAGEMENT_PROBLEMS",
+                      "RESOURCE_STATE_ISSUES",
+                      "RESOURCE_CAPACITY_PROBLEMS",
+                      "CONNECTION_PROBLEMS",
+                      "NETWORK_CONFIGURATION_ISSUES",
+                      "RESOURCE_LIMIT_EXCEEDED",
+                      "SERVICE_QUOTA_RESTRICTIONS",
+                      "SERVICE_INTEGRATION_CONFLICTS",
+                      "RESOURCE_CONFIGURATION_MISMATCHES",
+                      "SERVICE_SPECIFIC_OPERATIONS",
+                      "API_REQUEST_PROBLEMS",
+                      "OTHER",
+                    ],
+                  },
+                  "name": "errorSubCategory",
+                  "optional": false,
+                  "type": "string",
+                },
+              ],
+              "type": "object",
+            },
             "name": "errorContext",
             "optional": true,
             "type": "ErrorContext",
@@ -10928,9 +13047,17 @@ This will **not** be called for any custom filter components you have defined in
         "name": "CartesianChartProps.HighlightChangeDetail<Series>",
         "properties": [
           {
+            "inlineType": {
+              "name": "NonNullable<Series>",
+              "type": "union",
+              "values": [
+                "Series",
+                "{}",
+              ],
+            },
             "name": "highlightedSeries",
             "optional": false,
-            "type": "Series | null",
+            "type": "NonNullable<Series>",
           },
         ],
         "type": "object",
@@ -11140,6 +13267,17 @@ A value of \`null\` means no series is highlighted.
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "CartesianChartProps.TickFormatter<T>",
+              "parameters": [
+                {
+                  "name": "value",
+                  "type": "T",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "xTickFormatter",
             "optional": true,
             "type": "CartesianChartProps.TickFormatter<T>",
@@ -11150,6 +13288,17 @@ A value of \`null\` means no series is highlighted.
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "CartesianChartProps.TickFormatter<number>",
+              "parameters": [
+                {
+                  "name": "value",
+                  "type": "T",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "yTickFormatter",
             "optional": true,
             "type": "CartesianChartProps.TickFormatter<number>",
@@ -11670,16 +13819,69 @@ exports[`Components definition for list matches the snapshot: list 1`] = `
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "(initialPosition: number, finalPosition: number, total: number) => string",
+              "parameters": [
+                {
+                  "name": "initialPosition",
+                  "type": "number",
+                },
+                {
+                  "name": "finalPosition",
+                  "type": "number",
+                },
+                {
+                  "name": "total",
+                  "type": "number",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "liveAnnouncementDndItemCommitted",
             "optional": true,
             "type": "((initialPosition: number, finalPosition: number, total: number) => string)",
           },
           {
+            "inlineType": {
+              "name": "(initialPosition: number, currentPosition: number, total: number) => string",
+              "parameters": [
+                {
+                  "name": "initialPosition",
+                  "type": "number",
+                },
+                {
+                  "name": "currentPosition",
+                  "type": "number",
+                },
+                {
+                  "name": "total",
+                  "type": "number",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "liveAnnouncementDndItemReordered",
             "optional": true,
             "type": "((initialPosition: number, currentPosition: number, total: number) => string)",
           },
           {
+            "inlineType": {
+              "name": "(position: number, total: number) => string",
+              "parameters": [
+                {
+                  "name": "position",
+                  "type": "number",
+                },
+                {
+                  "name": "total",
+                  "type": "number",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "liveAnnouncementDndStarted",
             "optional": true,
             "type": "((position: number, total: number) => string)",
@@ -11850,9 +14052,17 @@ This will **not** be called for any custom filter components you have defined in
         "name": "CartesianChartProps.HighlightChangeDetail<Series>",
         "properties": [
           {
+            "inlineType": {
+              "name": "NonNullable<Series>",
+              "type": "union",
+              "values": [
+                "Series",
+                "{}",
+              ],
+            },
             "name": "highlightedSeries",
             "optional": false,
-            "type": "Series | null",
+            "type": "NonNullable<Series>",
           },
         ],
         "type": "object",
@@ -12070,6 +14280,17 @@ This can only be used when the chart consists exclusively of bar series.",
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "CartesianChartProps.TickFormatter<T>",
+              "parameters": [
+                {
+                  "name": "value",
+                  "type": "T",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "xTickFormatter",
             "optional": true,
             "type": "CartesianChartProps.TickFormatter<T>",
@@ -12080,6 +14301,17 @@ This can only be used when the chart consists exclusively of bar series.",
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "CartesianChartProps.TickFormatter<number>",
+              "parameters": [
+                {
+                  "name": "value",
+                  "type": "T",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "yTickFormatter",
             "optional": true,
             "type": "CartesianChartProps.TickFormatter<number>",
@@ -12330,9 +14562,21 @@ The event detail contains the \`reason\`, which can be any of the following:
         "name": "ModalProps.AnalyticsMetadata",
         "properties": [
           {
+            "inlineType": {
+              "name": "FlowType",
+              "type": "union",
+              "values": [
+                "create",
+                "edit",
+                "delete",
+                "home",
+                "dashboard",
+                "view-resource",
+              ],
+            },
             "name": "flowType",
             "optional": true,
-            "type": "FlowType",
+            "type": "string",
           },
           {
             "name": "instanceIdentifier",
@@ -13116,6 +15360,17 @@ Example:
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "(pageNumber: number) => string",
+              "parameters": [
+                {
+                  "name": "pageNumber",
+                  "type": "number",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "pageLabel",
             "optional": true,
             "type": "((pageNumber: number) => string)",
@@ -13201,9 +15456,17 @@ This isn't called for any custom filter components you've defined in \`additiona
         "name": "PieChartProps.HighlightChangeDetail<T>",
         "properties": [
           {
+            "inlineType": {
+              "name": "NonNullable<T>",
+              "type": "union",
+              "values": [
+                "T",
+                "{}",
+              ],
+            },
             "name": "highlightedSegment",
             "optional": false,
-            "type": "T | null",
+            "type": "NonNullable<T>",
           },
         ],
         "type": "object",
@@ -14526,9 +16789,17 @@ exports[`Components definition for property-filter matches the snapshot: propert
         "name": "PropertyFilterQuery",
         "properties": [
           {
+            "inlineType": {
+              "name": "PropertyFilterOperation",
+              "type": "union",
+              "values": [
+                "and",
+                "or",
+              ],
+            },
             "name": "operation",
             "optional": false,
-            "type": "PropertyFilterOperation",
+            "type": "string",
           },
           {
             "name": "tokenGroups",
@@ -14564,6 +16835,42 @@ exports[`Components definition for property-filter matches the snapshot: propert
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "PropertyFilterProps.FilteringProperty",
+              "properties": [
+                {
+                  "name": "defaultOperator",
+                  "optional": true,
+                  "type": "string",
+                },
+                {
+                  "name": "group",
+                  "optional": true,
+                  "type": "string",
+                },
+                {
+                  "name": "groupValuesLabel",
+                  "optional": false,
+                  "type": "string",
+                },
+                {
+                  "name": "key",
+                  "optional": false,
+                  "type": "string",
+                },
+                {
+                  "name": "operators",
+                  "optional": true,
+                  "type": "ReadonlyArray<string | PropertyFilterOperatorExtended<TokenValue>>",
+                },
+                {
+                  "name": "propertyLabel",
+                  "optional": false,
+                  "type": "string",
+                },
+              ],
+              "type": "object",
+            },
             "name": "filteringProperty",
             "optional": true,
             "type": "PropertyFilterProps.FilteringProperty",
@@ -14884,6 +17191,17 @@ This property cannot be set when \`enableTokenGroups=true\`.",
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "AutosuggestProps.EnteredTextLabel",
+              "parameters": [
+                {
+                  "name": "value",
+                  "type": "string",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "enteredTextLabel",
             "optional": true,
             "type": "AutosuggestProps.EnteredTextLabel",
@@ -14899,11 +17217,33 @@ This property cannot be set when \`enableTokenGroups=true\`.",
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "(token: PropertyFilterProps.FormattedToken) => string",
+              "parameters": [
+                {
+                  "name": "token",
+                  "type": "PropertyFilterProps.FormattedToken",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "formatToken",
             "optional": true,
             "type": "((token: PropertyFilterProps.FormattedToken) => string)",
           },
           {
+            "inlineType": {
+              "name": "(group: PropertyFilterProps.FormattedTokenGroup) => string",
+              "parameters": [
+                {
+                  "name": "group",
+                  "type": "PropertyFilterProps.FormattedTokenGroup",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "groupEditAriaLabel",
             "optional": true,
             "type": "((group: PropertyFilterProps.FormattedTokenGroup) => string)",
@@ -14994,16 +17334,49 @@ This property cannot be set when \`enableTokenGroups=true\`.",
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "(token: PropertyFilterProps.FormattedToken) => string",
+              "parameters": [
+                {
+                  "name": "token",
+                  "type": "PropertyFilterProps.FormattedToken",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "removeTokenButtonAriaLabel",
             "optional": true,
             "type": "((token: PropertyFilterProps.FormattedToken) => string)",
           },
           {
+            "inlineType": {
+              "name": "(token: PropertyFilterProps.FormattedToken) => string",
+              "parameters": [
+                {
+                  "name": "token",
+                  "type": "PropertyFilterProps.FormattedToken",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "tokenEditorAddExistingTokenAriaLabel",
             "optional": true,
             "type": "((token: PropertyFilterProps.FormattedToken) => string)",
           },
           {
+            "inlineType": {
+              "name": "(token: PropertyFilterProps.FormattedToken) => string",
+              "parameters": [
+                {
+                  "name": "token",
+                  "type": "PropertyFilterProps.FormattedToken",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "tokenEditorAddExistingTokenLabel",
             "optional": true,
             "type": "((token: PropertyFilterProps.FormattedToken) => string)",
@@ -15019,11 +17392,33 @@ This property cannot be set when \`enableTokenGroups=true\`.",
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "(token: PropertyFilterProps.FormattedToken) => string",
+              "parameters": [
+                {
+                  "name": "token",
+                  "type": "PropertyFilterProps.FormattedToken",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "tokenEditorTokenActionsAriaLabel",
             "optional": true,
             "type": "((token: PropertyFilterProps.FormattedToken) => string)",
           },
           {
+            "inlineType": {
+              "name": "(token: PropertyFilterProps.FormattedToken) => string",
+              "parameters": [
+                {
+                  "name": "token",
+                  "type": "PropertyFilterProps.FormattedToken",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "tokenEditorTokenRemoveAriaLabel",
             "optional": true,
             "type": "((token: PropertyFilterProps.FormattedToken) => string)",
@@ -15095,9 +17490,17 @@ Each token has the following properties:
         "name": "PropertyFilterQuery",
         "properties": [
           {
+            "inlineType": {
+              "name": "PropertyFilterOperation",
+              "type": "union",
+              "values": [
+                "and",
+                "or",
+              ],
+            },
             "name": "operation",
             "optional": false,
-            "type": "PropertyFilterOperation",
+            "type": "string",
           },
           {
             "name": "tokenGroups",
@@ -15345,6 +17748,22 @@ path of the selected resource and \`errorText\` that may contain a validation er
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "S3ResourceSelectorProps.Resource",
+              "properties": [
+                {
+                  "name": "uri",
+                  "optional": false,
+                  "type": "string",
+                },
+                {
+                  "name": "versionId",
+                  "optional": true,
+                  "type": "string",
+                },
+              ],
+              "type": "object",
+            },
             "name": "resource",
             "optional": false,
             "type": "S3ResourceSelectorProps.Resource",
@@ -15573,6 +17992,17 @@ The function will be called when a user clicks on the trigger button.",
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "(count: number) => string",
+              "parameters": [
+                {
+                  "name": "count",
+                  "type": "number",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "filteringCounterText",
             "optional": true,
             "type": "((count: number) => string)",
@@ -15643,6 +18073,17 @@ The function will be called when a user clicks on the trigger button.",
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "(itemsType: string) => string",
+              "parameters": [
+                {
+                  "name": "itemsType",
+                  "type": "string",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "labelFiltering",
             "optional": true,
             "type": "((itemsType: string) => string)",
@@ -15663,6 +18104,17 @@ The function will be called when a user clicks on the trigger button.",
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "SortingColumnContainingString",
+              "parameters": [
+                {
+                  "name": "columnName",
+                  "type": "string",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "labelNotSorted",
             "optional": true,
             "type": "SortingColumnContainingString",
@@ -15673,31 +18125,183 @@ The function will be called when a user clicks on the trigger button.",
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "SelectionLabels<S3ResourceSelectorProps.Bucket>",
+              "properties": [
+                {
+                  "inlineType": {
+                    "name": "(data: TableProps.SelectionState<T>, row: T) => string",
+                    "parameters": [
+                      {
+                        "name": "data",
+                        "type": "TableProps.SelectionState<T>",
+                      },
+                      {
+                        "name": "row",
+                        "type": "T",
+                      },
+                    ],
+                    "returnType": "string",
+                    "type": "function",
+                  },
+                  "name": "itemSelectionLabel",
+                  "optional": false,
+                  "type": "(data: TableProps.SelectionState<T>, row: T) => string",
+                },
+                {
+                  "name": "selectionGroupLabel",
+                  "optional": false,
+                  "type": "string",
+                },
+              ],
+              "type": "object",
+            },
             "name": "labelsBucketsSelection",
             "optional": true,
             "type": "SelectionLabels<S3ResourceSelectorProps.Bucket>",
           },
           {
+            "inlineType": {
+              "name": "SelectionLabels<S3ResourceSelectorProps.Object>",
+              "properties": [
+                {
+                  "inlineType": {
+                    "name": "(data: TableProps.SelectionState<T>, row: T) => string",
+                    "parameters": [
+                      {
+                        "name": "data",
+                        "type": "TableProps.SelectionState<T>",
+                      },
+                      {
+                        "name": "row",
+                        "type": "T",
+                      },
+                    ],
+                    "returnType": "string",
+                    "type": "function",
+                  },
+                  "name": "itemSelectionLabel",
+                  "optional": false,
+                  "type": "(data: TableProps.SelectionState<T>, row: T) => string",
+                },
+                {
+                  "name": "selectionGroupLabel",
+                  "optional": false,
+                  "type": "string",
+                },
+              ],
+              "type": "object",
+            },
             "name": "labelsObjectsSelection",
             "optional": true,
             "type": "SelectionLabels<S3ResourceSelectorProps.Object>",
           },
           {
+            "inlineType": {
+              "name": "SortingColumnContainingString",
+              "parameters": [
+                {
+                  "name": "columnName",
+                  "type": "string",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "labelSortedAscending",
             "optional": true,
             "type": "SortingColumnContainingString",
           },
           {
+            "inlineType": {
+              "name": "SortingColumnContainingString",
+              "parameters": [
+                {
+                  "name": "columnName",
+                  "type": "string",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "labelSortedDescending",
             "optional": true,
             "type": "SortingColumnContainingString",
           },
           {
+            "inlineType": {
+              "name": "PaginationProps.Labels",
+              "properties": [
+                {
+                  "name": "nextPageLabel",
+                  "optional": true,
+                  "type": "string",
+                },
+                {
+                  "inlineType": {
+                    "name": "(pageNumber: number) => string",
+                    "parameters": [
+                      {
+                        "name": "pageNumber",
+                        "type": "number",
+                      },
+                    ],
+                    "returnType": "string",
+                    "type": "function",
+                  },
+                  "name": "pageLabel",
+                  "optional": true,
+                  "type": "((pageNumber: number) => string)",
+                },
+                {
+                  "name": "paginationLabel",
+                  "optional": true,
+                  "type": "string",
+                },
+                {
+                  "name": "previousPageLabel",
+                  "optional": true,
+                  "type": "string",
+                },
+              ],
+              "type": "object",
+            },
             "name": "labelsPagination",
             "optional": true,
             "type": "PaginationProps.Labels",
           },
           {
+            "inlineType": {
+              "name": "SelectionLabels<S3ResourceSelectorProps.Version>",
+              "properties": [
+                {
+                  "inlineType": {
+                    "name": "(data: TableProps.SelectionState<T>, row: T) => string",
+                    "parameters": [
+                      {
+                        "name": "data",
+                        "type": "TableProps.SelectionState<T>",
+                      },
+                      {
+                        "name": "row",
+                        "type": "T",
+                      },
+                    ],
+                    "returnType": "string",
+                    "type": "function",
+                  },
+                  "name": "itemSelectionLabel",
+                  "optional": false,
+                  "type": "(data: TableProps.SelectionState<T>, row: T) => string",
+                },
+                {
+                  "name": "selectionGroupLabel",
+                  "optional": false,
+                  "type": "string",
+                },
+              ],
+              "type": "object",
+            },
             "name": "labelsVersionsSelection",
             "optional": true,
             "type": "SelectionLabels<S3ResourceSelectorProps.Version>",
@@ -16079,6 +18683,220 @@ The event \`detail\` contains the current \`selectedOption\`.",
         "name": "SelectProps.ChangeDetail",
         "properties": [
           {
+            "inlineType": {
+              "name": "OptionDefinition",
+              "properties": [
+                {
+                  "name": "__labelPrefix",
+                  "optional": true,
+                  "type": "string",
+                },
+                {
+                  "name": "description",
+                  "optional": true,
+                  "type": "string",
+                },
+                {
+                  "name": "disabled",
+                  "optional": true,
+                  "type": "boolean",
+                },
+                {
+                  "name": "disabledReason",
+                  "optional": true,
+                  "type": "string",
+                },
+                {
+                  "name": "filteringTags",
+                  "optional": true,
+                  "type": "ReadonlyArray<string>",
+                },
+                {
+                  "name": "iconAlt",
+                  "optional": true,
+                  "type": "string",
+                },
+                {
+                  "name": "iconAriaLabel",
+                  "optional": true,
+                  "type": "string",
+                },
+                {
+                  "inlineType": {
+                    "name": "IconProps.Name",
+                    "type": "union",
+                    "values": [
+                      "search",
+                      "map",
+                      "filter",
+                      "key",
+                      "file",
+                      "pause",
+                      "play",
+                      "remove",
+                      "copy",
+                      "menu",
+                      "script",
+                      "close",
+                      "status-pending",
+                      "refresh",
+                      "external",
+                      "group",
+                      "calendar",
+                      "ellipsis",
+                      "zoom-in",
+                      "zoom-out",
+                      "download",
+                      "security",
+                      "edit",
+                      "add-plus",
+                      "anchor-link",
+                      "angle-left-double",
+                      "angle-left",
+                      "angle-right-double",
+                      "angle-right",
+                      "angle-up",
+                      "angle-down",
+                      "arrow-left",
+                      "arrow-right",
+                      "arrow-up",
+                      "arrow-down",
+                      "audio-full",
+                      "audio-half",
+                      "audio-off",
+                      "backward-10-seconds",
+                      "bug",
+                      "call",
+                      "caret-down-filled",
+                      "caret-down",
+                      "caret-left-filled",
+                      "caret-right-filled",
+                      "caret-up-filled",
+                      "caret-up",
+                      "check",
+                      "contact",
+                      "closed-caption",
+                      "closed-caption-unavailable",
+                      "command-prompt",
+                      "delete-marker",
+                      "drag-indicator",
+                      "envelope",
+                      "exit-full-screen",
+                      "expand",
+                      "face-happy",
+                      "face-happy-filled",
+                      "face-neutral",
+                      "face-neutral-filled",
+                      "face-sad",
+                      "face-sad-filled",
+                      "file-open",
+                      "flag",
+                      "folder-open",
+                      "folder",
+                      "forward-10-seconds",
+                      "full-screen",
+                      "gen-ai",
+                      "globe",
+                      "grid-view",
+                      "group-active",
+                      "heart",
+                      "heart-filled",
+                      "insert-row",
+                      "keyboard",
+                      "list-view",
+                      "location-pin",
+                      "lock-private",
+                      "microphone",
+                      "microphone-off",
+                      "mini-player",
+                      "multiscreen",
+                      "notification",
+                      "redo",
+                      "resize-area",
+                      "settings",
+                      "send",
+                      "share",
+                      "shrink",
+                      "star-filled",
+                      "star-half",
+                      "star",
+                      "status-in-progress",
+                      "status-info",
+                      "status-negative",
+                      "status-positive",
+                      "status-stopped",
+                      "status-warning",
+                      "subtract-minus",
+                      "suggestions",
+                      "support",
+                      "thumbs-down-filled",
+                      "thumbs-down",
+                      "thumbs-up-filled",
+                      "thumbs-up",
+                      "ticket",
+                      "transcript",
+                      "treeview-collapse",
+                      "treeview-expand",
+                      "undo",
+                      "unlocked",
+                      "upload-download",
+                      "upload",
+                      "user-profile-active",
+                      "user-profile",
+                      "video-off",
+                      "video-on",
+                      "video-unavailable",
+                      "video-camera-off",
+                      "video-camera-on",
+                      "video-camera-unavailable",
+                      "view-full",
+                      "view-horizontal",
+                      "view-vertical",
+                      "zoom-to-fit",
+                    ],
+                  },
+                  "name": "iconName",
+                  "optional": true,
+                  "type": "string",
+                },
+                {
+                  "name": "iconSvg",
+                  "optional": true,
+                  "type": "React.ReactNode",
+                },
+                {
+                  "name": "iconUrl",
+                  "optional": true,
+                  "type": "string",
+                },
+                {
+                  "name": "label",
+                  "optional": true,
+                  "type": "string",
+                },
+                {
+                  "name": "labelTag",
+                  "optional": true,
+                  "type": "string",
+                },
+                {
+                  "name": "lang",
+                  "optional": true,
+                  "type": "string",
+                },
+                {
+                  "name": "tags",
+                  "optional": true,
+                  "type": "ReadonlyArray<string>",
+                },
+                {
+                  "name": "value",
+                  "optional": true,
+                  "type": "string",
+                },
+              ],
+              "type": "object",
+            },
             "name": "selectedOption",
             "optional": false,
             "type": "OptionDefinition",
@@ -16486,9 +19304,142 @@ If you want to clear the selection, use \`null\`.",
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "IconProps.Name",
+              "type": "union",
+              "values": [
+                "search",
+                "map",
+                "filter",
+                "key",
+                "file",
+                "pause",
+                "play",
+                "remove",
+                "copy",
+                "menu",
+                "script",
+                "close",
+                "status-pending",
+                "refresh",
+                "external",
+                "group",
+                "calendar",
+                "ellipsis",
+                "zoom-in",
+                "zoom-out",
+                "download",
+                "security",
+                "edit",
+                "add-plus",
+                "anchor-link",
+                "angle-left-double",
+                "angle-left",
+                "angle-right-double",
+                "angle-right",
+                "angle-up",
+                "angle-down",
+                "arrow-left",
+                "arrow-right",
+                "arrow-up",
+                "arrow-down",
+                "audio-full",
+                "audio-half",
+                "audio-off",
+                "backward-10-seconds",
+                "bug",
+                "call",
+                "caret-down-filled",
+                "caret-down",
+                "caret-left-filled",
+                "caret-right-filled",
+                "caret-up-filled",
+                "caret-up",
+                "check",
+                "contact",
+                "closed-caption",
+                "closed-caption-unavailable",
+                "command-prompt",
+                "delete-marker",
+                "drag-indicator",
+                "envelope",
+                "exit-full-screen",
+                "expand",
+                "face-happy",
+                "face-happy-filled",
+                "face-neutral",
+                "face-neutral-filled",
+                "face-sad",
+                "face-sad-filled",
+                "file-open",
+                "flag",
+                "folder-open",
+                "folder",
+                "forward-10-seconds",
+                "full-screen",
+                "gen-ai",
+                "globe",
+                "grid-view",
+                "group-active",
+                "heart",
+                "heart-filled",
+                "insert-row",
+                "keyboard",
+                "list-view",
+                "location-pin",
+                "lock-private",
+                "microphone",
+                "microphone-off",
+                "mini-player",
+                "multiscreen",
+                "notification",
+                "redo",
+                "resize-area",
+                "settings",
+                "send",
+                "share",
+                "shrink",
+                "star-filled",
+                "star-half",
+                "star",
+                "status-in-progress",
+                "status-info",
+                "status-negative",
+                "status-positive",
+                "status-stopped",
+                "status-warning",
+                "subtract-minus",
+                "suggestions",
+                "support",
+                "thumbs-down-filled",
+                "thumbs-down",
+                "thumbs-up-filled",
+                "thumbs-up",
+                "ticket",
+                "transcript",
+                "treeview-collapse",
+                "treeview-expand",
+                "undo",
+                "unlocked",
+                "upload-download",
+                "upload",
+                "user-profile-active",
+                "user-profile",
+                "video-off",
+                "video-on",
+                "video-unavailable",
+                "video-camera-off",
+                "video-camera-on",
+                "video-camera-unavailable",
+                "view-full",
+                "view-horizontal",
+                "view-vertical",
+                "zoom-to-fit",
+              ],
+            },
             "name": "iconName",
             "optional": true,
-            "type": "IconProps.Name",
+            "type": "string",
           },
           {
             "name": "iconSvg",
@@ -16645,6 +19596,14 @@ upon changing the \`activeHref\` property, this event isn't raised.",
             "type": "boolean",
           },
           {
+            "inlineType": {
+              "name": "SideNavigationProps.Section | SideNavigationProps.ExpandableLinkGroup",
+              "type": "union",
+              "values": [
+                "SideNavigationProps.Section",
+                "SideNavigationProps.ExpandableLinkGroup",
+              ],
+            },
             "name": "item",
             "optional": false,
             "type": "SideNavigationProps.Section | SideNavigationProps.ExpandableLinkGroup",
@@ -16693,9 +19652,19 @@ to the href of the clicked item so you'll have to do it yourself.",
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": ""link" | "section-header" | "link-group" | "expandable-link-group"",
+              "type": "union",
+              "values": [
+                "link",
+                "section-header",
+                "link-group",
+                "expandable-link-group",
+              ],
+            },
             "name": "type",
             "optional": true,
-            "type": ""link" | "section-header" | "link-group" | "expandable-link-group"",
+            "type": "string",
           },
         ],
         "type": "object",
@@ -16741,6 +19710,22 @@ It contains the following:
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "SideNavigationProps.Logo",
+              "properties": [
+                {
+                  "name": "alt",
+                  "optional": true,
+                  "type": "string",
+                },
+                {
+                  "name": "src",
+                  "optional": false,
+                  "type": "string",
+                },
+              ],
+              "type": "object",
+            },
             "name": "logo",
             "optional": true,
             "type": "SideNavigationProps.Logo",
@@ -16950,6 +19935,25 @@ is provided by its parent form field component.",
         "name": "SliderProps.I18nStrings",
         "properties": [
           {
+            "inlineType": {
+              "name": "(previousValue: string, value: number, nextValue: string) => string",
+              "parameters": [
+                {
+                  "name": "previousValue",
+                  "type": "string",
+                },
+                {
+                  "name": "value",
+                  "type": "number",
+                },
+                {
+                  "name": "nextValue",
+                  "type": "string",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "valueTextRange",
             "optional": false,
             "type": "(previousValue: string, value: number, nextValue: string) => string",
@@ -17541,9 +20545,17 @@ clicked row and the row object itself. Use this event to define a row click beha
         "name": "TableProps.OnRowClickDetail<T>",
         "properties": [
           {
+            "inlineType": {
+              "name": "NonNullable<T>",
+              "type": "union",
+              "values": [
+                "T",
+                "{}",
+              ],
+            },
             "name": "item",
             "optional": false,
-            "type": "T",
+            "type": "NonNullable<T>",
           },
           {
             "name": "rowIndex",
@@ -17578,9 +20590,17 @@ the default browser context menu behavior.",
             "type": "number",
           },
           {
+            "inlineType": {
+              "name": "NonNullable<T>",
+              "type": "union",
+              "values": [
+                "T",
+                "{}",
+              ],
+            },
             "name": "item",
             "optional": false,
-            "type": "T",
+            "type": "NonNullable<T>",
           },
           {
             "name": "rowIndex",
@@ -17624,6 +20644,37 @@ The event detail contains the current sortingColumn and isDescending.",
             "type": "boolean",
           },
           {
+            "inlineType": {
+              "name": "TableProps.SortingColumn<T>",
+              "properties": [
+                {
+                  "inlineType": {
+                    "name": "(a: T, b: T) => number",
+                    "parameters": [
+                      {
+                        "name": "a",
+                        "type": "T",
+                      },
+                      {
+                        "name": "b",
+                        "type": "T",
+                      },
+                    ],
+                    "returnType": "number",
+                    "type": "function",
+                  },
+                  "name": "sortingComparator",
+                  "optional": true,
+                  "type": "((a: T, b: T) => number)",
+                },
+                {
+                  "name": "sortingField",
+                  "optional": true,
+                  "type": "string",
+                },
+              ],
+              "type": "object",
+            },
             "name": "sortingColumn",
             "optional": false,
             "type": "TableProps.SortingColumn<T>",
@@ -17710,31 +20761,105 @@ You can use the first argument of type \`SelectionState\` to access the current 
         "name": "TableProps.AriaLabels<T>",
         "properties": [
           {
+            "inlineType": {
+              "name": "(column: TableProps.ColumnDefinition<any>, item: T) => string",
+              "parameters": [
+                {
+                  "name": "column",
+                  "type": "TableProps.ColumnDefinition<any>",
+                },
+                {
+                  "name": "item",
+                  "type": "T",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "activateEditLabel",
             "optional": true,
             "type": "((column: TableProps.ColumnDefinition<any>, item: T) => string)",
           },
           {
+            "inlineType": {
+              "name": "(data: TableProps.SelectionState<T>) => string",
+              "parameters": [
+                {
+                  "name": "data",
+                  "type": "TableProps.SelectionState<T>",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "allItemsSelectionLabel",
             "optional": true,
             "type": "((data: TableProps.SelectionState<T>) => string)",
           },
           {
+            "inlineType": {
+              "name": "(column: TableProps.ColumnDefinition<any>) => string",
+              "parameters": [
+                {
+                  "name": "column",
+                  "type": "TableProps.ColumnDefinition<any>",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "cancelEditLabel",
             "optional": true,
             "type": "((column: TableProps.ColumnDefinition<any>) => string)",
           },
           {
+            "inlineType": {
+              "name": "(item: T) => string",
+              "parameters": [
+                {
+                  "name": "item",
+                  "type": "T",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "collapseButtonLabel",
             "optional": true,
             "type": "((item: T) => string)",
           },
           {
+            "inlineType": {
+              "name": "(item: T) => string",
+              "parameters": [
+                {
+                  "name": "item",
+                  "type": "T",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "expandButtonLabel",
             "optional": true,
             "type": "((item: T) => string)",
           },
           {
+            "inlineType": {
+              "name": "(data: TableProps.SelectionState<T>, row: T) => string",
+              "parameters": [
+                {
+                  "name": "data",
+                  "type": "TableProps.SelectionState<T>",
+                },
+                {
+                  "name": "row",
+                  "type": "T",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "itemSelectionLabel",
             "optional": true,
             "type": "((data: TableProps.SelectionState<T>, row: T) => string)",
@@ -17750,16 +20875,49 @@ You can use the first argument of type \`SelectionState\` to access the current 
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "(column: TableProps.ColumnDefinition<any>) => string",
+              "parameters": [
+                {
+                  "name": "column",
+                  "type": "TableProps.ColumnDefinition<any>",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "submitEditLabel",
             "optional": true,
             "type": "((column: TableProps.ColumnDefinition<any>) => string)",
           },
           {
+            "inlineType": {
+              "name": "(column: TableProps.ColumnDefinition<any>) => string",
+              "parameters": [
+                {
+                  "name": "column",
+                  "type": "TableProps.ColumnDefinition<any>",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "submittingEditText",
             "optional": true,
             "type": "((column: TableProps.ColumnDefinition<any>) => string)",
           },
           {
+            "inlineType": {
+              "name": "(column: TableProps.ColumnDefinition<any>) => string",
+              "parameters": [
+                {
+                  "name": "column",
+                  "type": "TableProps.ColumnDefinition<any>",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "successfulEditLabel",
             "optional": true,
             "type": "((column: TableProps.ColumnDefinition<any>) => string)",
@@ -17903,16 +21061,49 @@ By default, the keyboard navigation is active for tables with expandable rows.",
             "type": "ReadonlyArray<T>",
           },
           {
+            "inlineType": {
+              "name": "(item: T) => ReadonlyArray<T>",
+              "parameters": [
+                {
+                  "name": "item",
+                  "type": "T",
+                },
+              ],
+              "returnType": "ReadonlyArray<T>",
+              "type": "function",
+            },
             "name": "getItemChildren",
             "optional": false,
             "type": "(item: T) => ReadonlyArray<T>",
           },
           {
+            "inlineType": {
+              "name": "(item: T) => boolean",
+              "parameters": [
+                {
+                  "name": "item",
+                  "type": "T",
+                },
+              ],
+              "returnType": "boolean",
+              "type": "function",
+            },
             "name": "isItemExpandable",
             "optional": false,
             "type": "(item: T) => boolean",
           },
           {
+            "inlineType": {
+              "name": "TableProps.OnExpandableItemToggle<T>",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": "NonCancelableCustomEvent<Detail>",
+                },
+              ],
+              "returnType": "void",
+              "type": "function",
+            },
             "name": "onExpandableItemToggle",
             "optional": false,
             "type": "TableProps.OnExpandableItemToggle<T>",
@@ -18129,6 +21320,21 @@ present in the \`columnDefinitions\` array.",
         "name": "TableProps.SortingColumn<T>",
         "properties": [
           {
+            "inlineType": {
+              "name": "(a: T, b: T) => number",
+              "parameters": [
+                {
+                  "name": "a",
+                  "type": "T",
+                },
+                {
+                  "name": "b",
+                  "type": "T",
+                },
+              ],
+              "returnType": "number",
+              "type": "function",
+            },
             "name": "sortingComparator",
             "optional": true,
             "type": "((a: T, b: T) => number)",
@@ -18631,11 +21837,33 @@ character validation. You should use this property only when absolutely necessar
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "(enteredText: string) => string",
+              "parameters": [
+                {
+                  "name": "enteredText",
+                  "type": "string",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "enteredKeyLabel",
             "optional": true,
             "type": "((enteredText: string) => string)",
           },
           {
+            "inlineType": {
+              "name": "(enteredText: string) => string",
+              "parameters": [
+                {
+                  "name": "enteredText",
+                  "type": "string",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "enteredValueLabel",
             "optional": true,
             "type": "((enteredText: string) => string)",
@@ -18711,21 +21939,69 @@ character validation. You should use this property only when absolutely necessar
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "(item: TagEditorProps.Tag) => string",
+              "parameters": [
+                {
+                  "name": "item",
+                  "type": "TagEditorProps.Tag",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "removeButtonAriaLabel",
             "optional": true,
             "type": "((item: TagEditorProps.Tag) => string)",
           },
           {
+            "inlineType": {
+              "name": "(availableTags: number, tagLimit: number) => string",
+              "parameters": [
+                {
+                  "name": "availableTags",
+                  "type": "number",
+                },
+                {
+                  "name": "tagLimit",
+                  "type": "number",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "tagLimit",
             "optional": true,
             "type": "((availableTags: number, tagLimit: number) => string)",
           },
           {
+            "inlineType": {
+              "name": "(tagLimit: number) => string",
+              "parameters": [
+                {
+                  "name": "tagLimit",
+                  "type": "number",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "tagLimitExceeded",
             "optional": true,
             "type": "((tagLimit: number) => string)",
           },
           {
+            "inlineType": {
+              "name": "(tagLimit: number) => string",
+              "parameters": [
+                {
+                  "name": "tagLimit",
+                  "type": "number",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "tagLimitReached",
             "optional": true,
             "type": "((tagLimit: number) => string)",
@@ -20730,11 +24006,38 @@ use the \`id\` attribute, consider setting it on a parent element instead.",
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "TopNavigationProps.Logo",
+              "properties": [
+                {
+                  "name": "alt",
+                  "optional": true,
+                  "type": "string",
+                },
+                {
+                  "name": "src",
+                  "optional": false,
+                  "type": "string",
+                },
+              ],
+              "type": "object",
+            },
             "name": "logo",
             "optional": true,
             "type": "TopNavigationProps.Logo",
           },
           {
+            "inlineType": {
+              "name": "CancelableEventHandler<{}>",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": "CustomEvent<Detail>",
+                },
+              ],
+              "returnType": "void",
+              "type": "function",
+            },
             "name": "onFollow",
             "optional": true,
             "type": "CancelableEventHandler<{}>",
@@ -20825,9 +24128,17 @@ exports[`Components definition for tree-view matches the snapshot: tree-view 1`]
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "NonNullable<T>",
+              "type": "union",
+              "values": [
+                "T",
+                "{}",
+              ],
+            },
             "name": "item",
             "optional": false,
-            "type": "T",
+            "type": "NonNullable<T>",
           },
         ],
         "type": "object",
@@ -20922,11 +24233,33 @@ Don't use \`ariaLabel\` and \`ariaLabelledby\` at the same time.",
         "name": "TreeViewProps.I18nStrings<T>",
         "properties": [
           {
+            "inlineType": {
+              "name": "(item: T) => string",
+              "parameters": [
+                {
+                  "name": "item",
+                  "type": "T",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "collapseButtonLabel",
             "optional": true,
             "type": "((item: T) => string)",
           },
           {
+            "inlineType": {
+              "name": "(item: T) => string",
+              "parameters": [
+                {
+                  "name": "item",
+                  "type": "T",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "expandButtonLabel",
             "optional": true,
             "type": "((item: T) => string)",
@@ -21013,6 +24346,52 @@ exports[`Components definition for tutorial-panel matches the snapshot: tutorial
         "name": "TutorialPanelProps.TutorialDetail",
         "properties": [
           {
+            "inlineType": {
+              "name": "TutorialPanelProps.Tutorial",
+              "properties": [
+                {
+                  "name": "completed",
+                  "optional": false,
+                  "type": "boolean",
+                },
+                {
+                  "name": "completedScreenDescription",
+                  "optional": true,
+                  "type": "React.ReactNode",
+                },
+                {
+                  "name": "description",
+                  "optional": true,
+                  "type": "React.ReactNode",
+                },
+                {
+                  "name": "learnMoreUrl",
+                  "optional": true,
+                  "type": "string | null",
+                },
+                {
+                  "name": "prerequisitesAlert",
+                  "optional": true,
+                  "type": "React.ReactNode",
+                },
+                {
+                  "name": "prerequisitesNeeded",
+                  "optional": true,
+                  "type": "boolean",
+                },
+                {
+                  "name": "tasks",
+                  "optional": false,
+                  "type": "ReadonlyArray<TutorialPanelProps.Task>",
+                },
+                {
+                  "name": "title",
+                  "optional": false,
+                  "type": "string",
+                },
+              ],
+              "type": "object",
+            },
             "name": "tutorial",
             "optional": false,
             "type": "TutorialPanelProps.Tutorial",
@@ -21076,11 +24455,43 @@ exports[`Components definition for tutorial-panel matches the snapshot: tutorial
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "{ pending: string; 'in-progress': string; success: string; }",
+              "properties": [
+                {
+                  "name": "in-progress",
+                  "optional": false,
+                  "type": "string",
+                },
+                {
+                  "name": "pending",
+                  "optional": false,
+                  "type": "string",
+                },
+                {
+                  "name": "success",
+                  "optional": false,
+                  "type": "string",
+                },
+              ],
+              "type": "object",
+            },
             "name": "labelsTaskStatus",
             "optional": false,
             "type": "{ pending: string; 'in-progress': string; success: string; }",
           },
           {
+            "inlineType": {
+              "name": "(totalStepCount: number) => string",
+              "parameters": [
+                {
+                  "name": "totalStepCount",
+                  "type": "number",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "labelTotalSteps",
             "optional": false,
             "type": "(totalStepCount: number) => string",
@@ -21111,11 +24522,41 @@ exports[`Components definition for tutorial-panel matches the snapshot: tutorial
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "(stepIndex: number, stepTitle: string) => string",
+              "parameters": [
+                {
+                  "name": "stepIndex",
+                  "type": "number",
+                },
+                {
+                  "name": "stepTitle",
+                  "type": "string",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "stepTitle",
             "optional": false,
             "type": "(stepIndex: number, stepTitle: string) => string",
           },
           {
+            "inlineType": {
+              "name": "(taskIndex: number, taskTitle: string) => string",
+              "parameters": [
+                {
+                  "name": "taskIndex",
+                  "type": "number",
+                },
+                {
+                  "name": "taskTitle",
+                  "type": "string",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "taskTitle",
             "optional": false,
             "type": "(taskIndex: number, taskTitle: string) => string",
@@ -21238,9 +24679,19 @@ or \`skip\` (when navigated using navigation pane or the *skip-to* button to the
         "name": "WizardProps.NavigateDetail",
         "properties": [
           {
+            "inlineType": {
+              "name": "WizardProps.NavigationReason",
+              "type": "union",
+              "values": [
+                "next",
+                "step",
+                "previous",
+                "skip",
+              ],
+            },
             "name": "reason",
             "optional": false,
-            "type": "WizardProps.NavigationReason",
+            "type": "string",
           },
           {
             "name": "requestedStepIndex",
@@ -21301,14 +24752,82 @@ Defaults to \`false\`.",
         "name": "WizardProps.AnalyticsMetadata",
         "properties": [
           {
+            "inlineType": {
+              "name": "ErrorContext",
+              "properties": [
+                {
+                  "inlineType": {
+                    "name": "ErrorCategory",
+                    "type": "union",
+                    "values": [
+                      "OTHER",
+                      "INPUT_VALIDATION",
+                      "PERMISSION_IAM",
+                      "RESOURCE_AVAILABILITY",
+                      "NETWORK_CONNECTIVITY",
+                      "SERVICE_QUOTAS_LIMITS",
+                      "CONFIGURATION_CONFLICTS",
+                      "API_SPECIFIC",
+                    ],
+                  },
+                  "name": "errorCategory",
+                  "optional": false,
+                  "type": "string",
+                },
+                {
+                  "name": "errorMessage",
+                  "optional": false,
+                  "type": "string",
+                },
+                {
+                  "inlineType": {
+                    "name": "ErrorSubCategory",
+                    "type": "union",
+                    "values": [
+                      "DATA_FORMAT_ISSUES",
+                      "PARAMETER_VALIDATION_ISSUES",
+                      "ACCESS_CONTROL_ISSUES",
+                      "IDENTITY_MANAGEMENT_PROBLEMS",
+                      "RESOURCE_STATE_ISSUES",
+                      "RESOURCE_CAPACITY_PROBLEMS",
+                      "CONNECTION_PROBLEMS",
+                      "NETWORK_CONFIGURATION_ISSUES",
+                      "RESOURCE_LIMIT_EXCEEDED",
+                      "SERVICE_QUOTA_RESTRICTIONS",
+                      "SERVICE_INTEGRATION_CONFLICTS",
+                      "RESOURCE_CONFIGURATION_MISMATCHES",
+                      "SERVICE_SPECIFIC_OPERATIONS",
+                      "API_REQUEST_PROBLEMS",
+                      "OTHER",
+                    ],
+                  },
+                  "name": "errorSubCategory",
+                  "optional": false,
+                  "type": "string",
+                },
+              ],
+              "type": "object",
+            },
             "name": "errorContext",
             "optional": true,
             "type": "ErrorContext",
           },
           {
+            "inlineType": {
+              "name": "FlowType",
+              "type": "union",
+              "values": [
+                "create",
+                "edit",
+                "delete",
+                "home",
+                "dashboard",
+                "view-resource",
+              ],
+            },
             "name": "flowType",
             "optional": true,
-            "type": "FlowType",
+            "type": "string",
           },
           {
             "name": "instanceIdentifier",
@@ -21363,6 +24882,21 @@ Defaults to \`false\`.",
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "(stepNumber: number, stepsCount: number) => string",
+              "parameters": [
+                {
+                  "name": "stepNumber",
+                  "type": "number",
+                },
+                {
+                  "name": "stepsCount",
+                  "type": "number",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "collapsedStepsLabel",
             "optional": true,
             "type": "((stepNumber: number, stepsCount: number) => string)",
@@ -21398,11 +24932,37 @@ Defaults to \`false\`.",
             "type": "string",
           },
           {
+            "inlineType": {
+              "name": "(targetStep: WizardProps.Step, targetStepNumber: number) => string",
+              "parameters": [
+                {
+                  "name": "targetStep",
+                  "type": "WizardProps.Step",
+                },
+                {
+                  "name": "targetStepNumber",
+                  "type": "number",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "skipToButtonLabel",
             "optional": true,
             "type": "((targetStep: WizardProps.Step, targetStepNumber: number) => string)",
           },
           {
+            "inlineType": {
+              "name": "(stepNumber: number) => string",
+              "parameters": [
+                {
+                  "name": "stepNumber",
+                  "type": "number",
+                },
+              ],
+              "returnType": "string",
+              "type": "function",
+            },
             "name": "stepNumberLabel",
             "optional": true,
             "type": "((stepNumber: number) => string)",
