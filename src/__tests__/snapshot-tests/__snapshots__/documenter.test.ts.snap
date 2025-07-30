@@ -5681,6 +5681,77 @@ The main action also supports the following properties of the [button](/componen
       "type": "ButtonDropdownProps.MainAction",
     },
     {
+      "description": "Attributes to add to the native element of the \`mainAction\`.
+
+Specify either \`button\` for a standard main action, or \`anchor\` if \`html\` is set.
+
+Some attributes will be automatically combined with internal attribute values:
+- \`className\` will be appended.
+- Event handlers will be chained, unless the default is prevented.
+
+We do not support using this attribute to apply custom styling.",
+      "inlineType": {
+        "name": "object",
+        "properties": [
+          {
+            "inlineType": {
+              "name": "Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, "children"> & Record<\`data-\${string}\`, string>",
+              "type": "union",
+              "values": [
+                "Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, "children">",
+                "Record<\`data-\${string}\`, string>",
+              ],
+            },
+            "name": "anchor",
+            "optional": true,
+            "type": "Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, "children"> & Record<\`data-\${string}\`, string>",
+          },
+          {
+            "inlineType": {
+              "name": "Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "children"> & Record<\`data-\${string}\`, string>",
+              "type": "union",
+              "values": [
+                "Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "children">",
+                "Record<\`data-\${string}\`, string>",
+              ],
+            },
+            "name": "button",
+            "optional": true,
+            "type": "Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "children"> & Record<\`data-\${string}\`, string>",
+          },
+        ],
+        "type": "object",
+      },
+      "name": "nativeMainActionAttributes",
+      "optional": true,
+      "systemTags": [
+        "core",
+      ],
+      "type": "{ button?: NativeAttributes<React.ButtonHTMLAttributes<HTMLButtonElement>>; anchor?: NativeAttributes<React.AnchorHTMLAttributes<HTMLAnchorElement>>; }",
+    },
+    {
+      "description": "Attributes to add to the native \`button\` element.
+Some attributes will be automatically combined with internal attribute values:
+- \`className\` will be appended.
+- Event handlers will be chained, unless the default is prevented.
+
+We do not support using this attribute to apply custom styling.",
+      "inlineType": {
+        "name": "Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "children"> & Record<\`data-\${string}\`, string>",
+        "type": "union",
+        "values": [
+          "Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "children">",
+          "Record<\`data-\${string}\`, string>",
+        ],
+      },
+      "name": "nativeTriggerAttributes",
+      "optional": true,
+      "systemTags": [
+        "core",
+      ],
+      "type": "Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "children"> & Record<\`data-\${string}\`, string>",
+    },
+    {
       "defaultValue": "'normal'",
       "description": "Determines the general styling of the button dropdown.
 * \`primary\` for primary buttons
