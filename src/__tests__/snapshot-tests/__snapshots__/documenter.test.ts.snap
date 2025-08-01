@@ -12923,6 +12923,700 @@ In most cases, they aren't needed, as the \`svg\` element inherits styles from t
 }
 `;
 
+exports[`Components definition for icon-provider matches the snapshot: icon-provider 1`] = `
+{
+  "dashCaseName": "icon-provider",
+  "events": [],
+  "functions": [],
+  "name": "IconProvider",
+  "properties": [
+    {
+      "deprecatedTag": "Custom CSS is not supported. For testing and other use cases, use [data attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes).",
+      "description": "Adds the specified classes to the root element of the component.",
+      "name": "className",
+      "optional": true,
+      "type": "string",
+    },
+    {
+      "description": "Specifies icon overrides using existing icon names, for example, \`{'add-plus': <svg>...</svg>}\`.
+
+These icon overrides will automatically be applied to any component that is a descendant of this provider, including nested providers.
+
+Set to \`null\` to reset the icons to the default set or set specific icon names to \`null\` to change them back to the default set.
+
+For example, override \`AppLayout\` icons but not icons in the content slot by wrapping content with an \`IconProvider\` with this property set to \`null\`.
+
+\`<Icon ... />\` component can be used as an override (for example, \`{'close': <Icon name='arrow-left' />}\`).
+However, if the icon name is the same as the key, for example, \`{'close': <Icon name='close' />}\` an infinite loop will be created.
+The same applies to switching icons in the same configuration (for example, \`{'close': <Icon name='arrow-left' />, 'arrow-left': <Icon name='close' />}\`).",
+      "inlineType": {
+        "name": "IconProviderProps.Icons",
+        "properties": [
+          {
+            "name": "add-plus",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "anchor-link",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "angle-down",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "angle-left",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "angle-left-double",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "angle-right",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "angle-right-double",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "angle-up",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "arrow-down",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "arrow-left",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "arrow-right",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "arrow-up",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "audio-full",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "audio-half",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "audio-off",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "backward-10-seconds",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "bug",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "calendar",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "call",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "caret-down",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "caret-down-filled",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "caret-left-filled",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "caret-right-filled",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "caret-up",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "caret-up-filled",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "check",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "close",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "closed-caption",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "closed-caption-unavailable",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "command-prompt",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "contact",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "copy",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "delete-marker",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "download",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "drag-indicator",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "edit",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "ellipsis",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "envelope",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "exit-full-screen",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "expand",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "external",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "face-happy",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "face-happy-filled",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "face-neutral",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "face-neutral-filled",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "face-sad",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "face-sad-filled",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "file",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "file-open",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "filter",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "flag",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "folder",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "folder-open",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "forward-10-seconds",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "full-screen",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "gen-ai",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "globe",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "grid-view",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "group",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "group-active",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "heart",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "heart-filled",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "insert-row",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "key",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "keyboard",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "list-view",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "location-pin",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "lock-private",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "map",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "menu",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "microphone",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "microphone-off",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "mini-player",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "multiscreen",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "notification",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "pause",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "play",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "redo",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "refresh",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "remove",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "resize-area",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "script",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "search",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "security",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "send",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "settings",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "share",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "shrink",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "star",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "star-filled",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "star-half",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "status-in-progress",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "status-info",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "status-negative",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "status-pending",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "status-positive",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "status-stopped",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "status-warning",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "subtract-minus",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "suggestions",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "support",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "thumbs-down",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "thumbs-down-filled",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "thumbs-up",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "thumbs-up-filled",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "ticket",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "transcript",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "treeview-collapse",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "treeview-expand",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "undo",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "unlocked",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "upload",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "upload-download",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "user-profile",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "user-profile-active",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "video-camera-off",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "video-camera-on",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "video-camera-unavailable",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "video-off",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "video-on",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "video-unavailable",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "view-full",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "view-horizontal",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "view-vertical",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "zoom-in",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "zoom-out",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+          {
+            "name": "zoom-to-fit",
+            "optional": true,
+            "type": "React.ReactNode",
+          },
+        ],
+        "type": "object",
+      },
+      "name": "icons",
+      "optional": false,
+      "type": "IconProviderProps.Icons | null",
+    },
+    {
+      "deprecatedTag": "The usage of the \`id\` attribute is reserved for internal use cases. For testing and other use cases,
+use [data attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes). If you must
+use the \`id\` attribute, consider setting it on a parent element instead.",
+      "description": "Adds the specified ID to the root element of the component.",
+      "name": "id",
+      "optional": true,
+      "type": "string",
+    },
+  ],
+  "regions": [
+    {
+      "isDefault": true,
+      "name": "children",
+    },
+  ],
+  "releaseStatus": "stable",
+  "systemTags": [
+    "core",
+  ],
+}
+`;
+
 exports[`Components definition for input matches the snapshot: input 1`] = `
 {
   "dashCaseName": "input",
