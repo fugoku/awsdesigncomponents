@@ -6876,6 +6876,219 @@ If both \`readOnly\` and \`disabled\` are set, \`disabled\` takes precedence.",
       "optional": true,
       "type": "boolean",
     },
+    {
+      "description": "Specifies an object of selectors and properties that are used to apply custom styles.",
+      "inlineType": {
+        "name": "CheckboxProps.Style",
+        "properties": [
+          {
+            "inlineType": {
+              "name": "object",
+              "properties": [
+                {
+                  "inlineType": {
+                    "name": "object",
+                    "properties": [
+                      {
+                        "inlineType": {
+                          "name": "object",
+                          "properties": [
+                            {
+                              "name": "checked",
+                              "optional": true,
+                              "type": "string",
+                            },
+                            {
+                              "name": "disabled",
+                              "optional": true,
+                              "type": "string",
+                            },
+                            {
+                              "name": "indeterminate",
+                              "optional": true,
+                              "type": "string",
+                            },
+                            {
+                              "name": "readOnly",
+                              "optional": true,
+                              "type": "string",
+                            },
+                          ],
+                          "type": "object",
+                        },
+                        "name": "stroke",
+                        "optional": true,
+                        "type": "{ checked?: string | undefined; disabled?: string | undefined; indeterminate?: string | undefined; readOnly?: string | undefined; }",
+                      },
+                    ],
+                    "type": "object",
+                  },
+                  "name": "check",
+                  "optional": true,
+                  "type": "{ stroke?: { checked?: string | undefined; disabled?: string | undefined; indeterminate?: string | undefined; readOnly?: string | undefined; } | undefined; }",
+                },
+                {
+                  "inlineType": {
+                    "name": "object",
+                    "properties": [
+                      {
+                        "name": "checked",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "default",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "disabled",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "indeterminate",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "readOnly",
+                        "optional": true,
+                        "type": "string",
+                      },
+                    ],
+                    "type": "object",
+                  },
+                  "name": "fill",
+                  "optional": true,
+                  "type": "{ checked?: string | undefined; default?: string | undefined; disabled?: string | undefined; indeterminate?: string | undefined; readOnly?: string | undefined; }",
+                },
+                {
+                  "inlineType": {
+                    "name": "object",
+                    "properties": [
+                      {
+                        "name": "borderColor",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "borderRadius",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "borderWidth",
+                        "optional": true,
+                        "type": "string",
+                      },
+                    ],
+                    "type": "object",
+                  },
+                  "name": "focusRing",
+                  "optional": true,
+                  "type": "{ borderColor?: string | undefined; borderRadius?: string | undefined; borderWidth?: string | undefined; }",
+                },
+                {
+                  "inlineType": {
+                    "name": "object",
+                    "properties": [
+                      {
+                        "name": "checked",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "default",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "disabled",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "indeterminate",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "readOnly",
+                        "optional": true,
+                        "type": "string",
+                      },
+                    ],
+                    "type": "object",
+                  },
+                  "name": "stroke",
+                  "optional": true,
+                  "type": "{ checked?: string | undefined; default?: string | undefined; disabled?: string | undefined; indeterminate?: string | undefined; readOnly?: string | undefined; }",
+                },
+              ],
+              "type": "object",
+            },
+            "name": "input",
+            "optional": true,
+            "type": "{ fill?: { checked?: string | undefined; default?: string | undefined; disabled?: string | undefined; indeterminate?: string | undefined; readOnly?: string | undefined; } | undefined; stroke?: { ...; } | undefined; check?: { ...; } | undefined; focusRing?: { ...; } | undefined; }",
+          },
+          {
+            "inlineType": {
+              "name": "object",
+              "properties": [
+                {
+                  "inlineType": {
+                    "name": "object",
+                    "properties": [
+                      {
+                        "name": "checked",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "default",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "disabled",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "indeterminate",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "readOnly",
+                        "optional": true,
+                        "type": "string",
+                      },
+                    ],
+                    "type": "object",
+                  },
+                  "name": "color",
+                  "optional": true,
+                  "type": "{ checked?: string | undefined; default?: string | undefined; disabled?: string | undefined; indeterminate?: string | undefined; readOnly?: string | undefined; }",
+                },
+              ],
+              "type": "object",
+            },
+            "name": "label",
+            "optional": true,
+            "type": "{ color?: { checked?: string | undefined; default?: string | undefined; disabled?: string | undefined; indeterminate?: string | undefined; readOnly?: string | undefined; } | undefined; }",
+          },
+        ],
+        "type": "object",
+      },
+      "name": "style",
+      "optional": true,
+      "systemTags": [
+        "core",
+      ],
+      "type": "CheckboxProps.Style",
+    },
   ],
   "regions": [
     {
@@ -18951,6 +19164,236 @@ being included in a form submission. A read-only control is still focusable.",
       "type": "boolean",
     },
     {
+      "description": "Specifies an object of selectors and properties that are used to apply custom styles.",
+      "inlineType": {
+        "name": "RadioGroupProps.Style",
+        "properties": [
+          {
+            "inlineType": {
+              "name": "object",
+              "properties": [
+                {
+                  "inlineType": {
+                    "name": "object",
+                    "properties": [
+                      {
+                        "name": "checked",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "default",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "disabled",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "readOnly",
+                        "optional": true,
+                        "type": "string",
+                      },
+                    ],
+                    "type": "object",
+                  },
+                  "name": "color",
+                  "optional": true,
+                  "type": "{ checked?: string | undefined; default?: string | undefined; disabled?: string | undefined; readOnly?: string | undefined; }",
+                },
+              ],
+              "type": "object",
+            },
+            "name": "description",
+            "optional": true,
+            "type": "{ color?: { checked?: string | undefined; default?: string | undefined; disabled?: string | undefined; readOnly?: string | undefined; } | undefined; }",
+          },
+          {
+            "inlineType": {
+              "name": "object",
+              "properties": [
+                {
+                  "inlineType": {
+                    "name": "object",
+                    "properties": [
+                      {
+                        "inlineType": {
+                          "name": "{ checked?: string | undefined; disabled?: string | undefined; readOnly?: string | undefined; }",
+                          "properties": [
+                            {
+                              "name": "checked",
+                              "optional": true,
+                              "type": "string",
+                            },
+                            {
+                              "name": "disabled",
+                              "optional": true,
+                              "type": "string",
+                            },
+                            {
+                              "name": "readOnly",
+                              "optional": true,
+                              "type": "string",
+                            },
+                          ],
+                          "type": "object",
+                        },
+                        "name": "fill",
+                        "optional": true,
+                        "type": "{ checked?: string | undefined; disabled?: string | undefined; readOnly?: string | undefined; }",
+                      },
+                    ],
+                    "type": "object",
+                  },
+                  "name": "circle",
+                  "optional": true,
+                  "type": "{ fill?: { checked?: string | undefined; disabled?: string | undefined; readOnly?: string | undefined; } | undefined; }",
+                },
+                {
+                  "inlineType": {
+                    "name": "object",
+                    "properties": [
+                      {
+                        "name": "checked",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "default",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "disabled",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "readOnly",
+                        "optional": true,
+                        "type": "string",
+                      },
+                    ],
+                    "type": "object",
+                  },
+                  "name": "fill",
+                  "optional": true,
+                  "type": "{ checked?: string | undefined; default?: string | undefined; disabled?: string | undefined; readOnly?: string | undefined; }",
+                },
+                {
+                  "inlineType": {
+                    "name": "object",
+                    "properties": [
+                      {
+                        "name": "borderColor",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "borderRadius",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "borderWidth",
+                        "optional": true,
+                        "type": "string",
+                      },
+                    ],
+                    "type": "object",
+                  },
+                  "name": "focusRing",
+                  "optional": true,
+                  "type": "{ borderColor?: string | undefined; borderRadius?: string | undefined; borderWidth?: string | undefined; }",
+                },
+                {
+                  "inlineType": {
+                    "name": "{ default?: string | undefined; disabled?: string | undefined; readOnly?: string | undefined; }",
+                    "properties": [
+                      {
+                        "name": "default",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "disabled",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "readOnly",
+                        "optional": true,
+                        "type": "string",
+                      },
+                    ],
+                    "type": "object",
+                  },
+                  "name": "stroke",
+                  "optional": true,
+                  "type": "{ default?: string | undefined; disabled?: string | undefined; readOnly?: string | undefined; }",
+                },
+              ],
+              "type": "object",
+            },
+            "name": "input",
+            "optional": true,
+            "type": "{ fill?: { checked?: string | undefined; default?: string | undefined; disabled?: string | undefined; readOnly?: string | undefined; } | undefined; stroke?: { default?: string | undefined; disabled?: string | undefined; readOnly?: string | undefined; } | undefined; circle?: { ...; } | undefined; focusRing?: { ...; }...",
+          },
+          {
+            "inlineType": {
+              "name": "object",
+              "properties": [
+                {
+                  "inlineType": {
+                    "name": "object",
+                    "properties": [
+                      {
+                        "name": "checked",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "default",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "disabled",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "readOnly",
+                        "optional": true,
+                        "type": "string",
+                      },
+                    ],
+                    "type": "object",
+                  },
+                  "name": "color",
+                  "optional": true,
+                  "type": "{ checked?: string | undefined; default?: string | undefined; disabled?: string | undefined; readOnly?: string | undefined; }",
+                },
+              ],
+              "type": "object",
+            },
+            "name": "label",
+            "optional": true,
+            "type": "{ color?: { checked?: string | undefined; default?: string | undefined; disabled?: string | undefined; readOnly?: string | undefined; } | undefined; }",
+          },
+        ],
+        "type": "object",
+      },
+      "name": "style",
+      "optional": true,
+      "systemTags": [
+        "core",
+      ],
+      "type": "RadioGroupProps.Style",
+    },
+    {
       "description": "Sets the value of the selected radio button.
 If you want to clear the selection, use \`null\`.",
       "name": "value",
@@ -24438,6 +24881,173 @@ If both \`readOnly\` and \`disabled\` are set, \`disabled\` takes precedence.",
       "name": "readOnly",
       "optional": true,
       "type": "boolean",
+    },
+    {
+      "description": "Specifies an object of selectors and properties that are used to apply custom styles.",
+      "inlineType": {
+        "name": "ToggleProps.Style",
+        "properties": [
+          {
+            "inlineType": {
+              "name": "object",
+              "properties": [
+                {
+                  "inlineType": {
+                    "name": "object",
+                    "properties": [
+                      {
+                        "name": "checked",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "default",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "disabled",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "readOnly",
+                        "optional": true,
+                        "type": "string",
+                      },
+                    ],
+                    "type": "object",
+                  },
+                  "name": "background",
+                  "optional": true,
+                  "type": "{ checked?: string | undefined; default?: string | undefined; disabled?: string | undefined; readOnly?: string | undefined; }",
+                },
+                {
+                  "inlineType": {
+                    "name": "object",
+                    "properties": [
+                      {
+                        "name": "borderColor",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "borderRadius",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "borderWidth",
+                        "optional": true,
+                        "type": "string",
+                      },
+                    ],
+                    "type": "object",
+                  },
+                  "name": "focusRing",
+                  "optional": true,
+                  "type": "{ borderColor?: string | undefined; borderRadius?: string | undefined; borderWidth?: string | undefined; }",
+                },
+                {
+                  "inlineType": {
+                    "name": "object",
+                    "properties": [
+                      {
+                        "inlineType": {
+                          "name": "object",
+                          "properties": [
+                            {
+                              "name": "checked",
+                              "optional": true,
+                              "type": "string",
+                            },
+                            {
+                              "name": "default",
+                              "optional": true,
+                              "type": "string",
+                            },
+                            {
+                              "name": "disabled",
+                              "optional": true,
+                              "type": "string",
+                            },
+                            {
+                              "name": "readOnly",
+                              "optional": true,
+                              "type": "string",
+                            },
+                          ],
+                          "type": "object",
+                        },
+                        "name": "background",
+                        "optional": true,
+                        "type": "{ checked?: string | undefined; default?: string | undefined; disabled?: string | undefined; readOnly?: string | undefined; }",
+                      },
+                    ],
+                    "type": "object",
+                  },
+                  "name": "handle",
+                  "optional": true,
+                  "type": "{ background?: { checked?: string | undefined; default?: string | undefined; disabled?: string | undefined; readOnly?: string | undefined; } | undefined; }",
+                },
+              ],
+              "type": "object",
+            },
+            "name": "input",
+            "optional": false,
+            "type": "{ background?: { checked?: string | undefined; default?: string | undefined; disabled?: string | undefined; readOnly?: string | undefined; } | undefined; handle?: { background?: { checked?: string | undefined; default?: string | undefined; disabled?: string | undefined; readOnly?: string | undefined; } | undefined; ...",
+          },
+          {
+            "inlineType": {
+              "name": "object",
+              "properties": [
+                {
+                  "inlineType": {
+                    "name": "object",
+                    "properties": [
+                      {
+                        "name": "checked",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "default",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "disabled",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "readOnly",
+                        "optional": true,
+                        "type": "string",
+                      },
+                    ],
+                    "type": "object",
+                  },
+                  "name": "color",
+                  "optional": true,
+                  "type": "{ checked?: string | undefined; default?: string | undefined; disabled?: string | undefined; readOnly?: string | undefined; }",
+                },
+              ],
+              "type": "object",
+            },
+            "name": "label",
+            "optional": true,
+            "type": "{ color?: { checked?: string | undefined; default?: string | undefined; disabled?: string | undefined; readOnly?: string | undefined; } | undefined; }",
+          },
+        ],
+        "type": "object",
+      },
+      "name": "style",
+      "optional": true,
+      "systemTags": [
+        "core",
+      ],
+      "type": "ToggleProps.Style",
     },
   ],
   "regions": [
