@@ -16469,6 +16469,12 @@ use the \`id\` attribute, consider setting it on a parent element instead.",
       "type": "string",
     },
     {
+      "description": "Specifies an inline label that appears next to the multiselect trigger.",
+      "name": "inlineLabelText",
+      "optional": true,
+      "type": "string",
+    },
+    {
       "description": "Shows tokens inside the trigger instead of below it.",
       "name": "inlineTokens",
       "optional": true,
@@ -74561,6 +74567,14 @@ Component's wrapper class",
           },
         },
         {
+          "name": "findInlineLabel",
+          "parameters": [],
+          "returnType": {
+            "name": "ElementWrapper | null",
+            "type": "union",
+          },
+        },
+        {
           "name": "findPlaceholder",
           "parameters": [],
           "returnType": {
@@ -132501,6 +132515,15 @@ Component's wrapper class",
           ],
           "returnType": {
             "name": "InputWrapper",
+            "type": "reference",
+            "typeArguments": [],
+          },
+        },
+        {
+          "name": "findInlineLabel",
+          "parameters": [],
+          "returnType": {
+            "name": "ElementWrapper",
             "type": "reference",
             "typeArguments": [],
           },
