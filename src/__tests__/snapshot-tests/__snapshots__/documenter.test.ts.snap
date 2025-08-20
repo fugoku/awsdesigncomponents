@@ -26958,6 +26958,7 @@ exports[`Test-utils dom definitions match the snapshot 1`] = `
           "name": "blur",
           "parameters": [],
           "returnType": {
+            "isNullable": false,
             "name": "void",
           },
         },
@@ -26975,6 +26976,7 @@ Note that programmatic events ignore disabled attribute and will trigger listene
             },
           ],
           "returnType": {
+            "isNullable": false,
             "name": "void",
           },
         },
@@ -26990,7 +26992,13 @@ Note that programmatic events ignore disabled attribute and will trigger listene
             },
           ],
           "returnType": {
-            "name": "ElementWrapper<NewElementType> | null",
+            "isNullable": true,
+            "name": "ElementWrapper",
+            "typeArguments": [
+              {
+                "name": "NewElementType",
+              },
+            ],
           },
         },
         {
@@ -27005,7 +27013,13 @@ Note that programmatic events ignore disabled attribute and will trigger listene
             },
           ],
           "returnType": {
-            "name": "Array<ElementWrapper<NewElementType>>",
+            "isNullable": false,
+            "name": "Array",
+            "typeArguments": [
+              {
+                "name": "ElementWrapper<NewElementType>",
+              },
+            ],
           },
         },
         {
@@ -27020,7 +27034,13 @@ Note that programmatic events ignore disabled attribute and will trigger listene
             },
           ],
           "returnType": {
-            "name": "Array<ElementWrapper<NewElementType>>",
+            "isNullable": false,
+            "name": "Array",
+            "typeArguments": [
+              {
+                "name": "ElementWrapper<NewElementType>",
+              },
+            ],
           },
         },
         {
@@ -27047,7 +27067,13 @@ If no matching component is found, returns an empty array.",
             },
           ],
           "returnType": {
-            "name": "Array<Wrapper>",
+            "isNullable": false,
+            "name": "Array",
+            "typeArguments": [
+              {
+                "name": "Wrapper",
+              },
+            ],
           },
         },
         {
@@ -27062,7 +27088,13 @@ If no matching component is found, returns an empty array.",
             },
           ],
           "returnType": {
-            "name": "ElementWrapper<NewElementType> | null",
+            "isNullable": true,
+            "name": "ElementWrapper",
+            "typeArguments": [
+              {
+                "name": "NewElementType",
+              },
+            ],
           },
         },
         {
@@ -27077,7 +27109,13 @@ If no matching component is found, returns an empty array.",
             },
           ],
           "returnType": {
-            "name": "ElementWrapper<NewElementType> | null",
+            "isNullable": true,
+            "name": "ElementWrapper",
+            "typeArguments": [
+              {
+                "name": "NewElementType",
+              },
+            ],
           },
         },
         {
@@ -27105,7 +27143,8 @@ Note: This function returns the specified component's wrapper even if the specif
             },
           ],
           "returnType": {
-            "name": "Wrapper | null",
+            "isNullable": true,
+            "name": "Wrapper",
           },
         },
         {
@@ -27120,6 +27159,7 @@ Note: This function returns the specified component's wrapper even if the specif
             },
           ],
           "returnType": {
+            "isNullable": false,
             "name": "void",
           },
         },
@@ -27127,6 +27167,7 @@ Note: This function returns the specified component's wrapper even if the specif
           "name": "focus",
           "parameters": [],
           "returnType": {
+            "isNullable": false,
             "name": "void",
           },
         },
@@ -27134,6 +27175,7 @@ Note: This function returns the specified component's wrapper even if the specif
           "name": "getElement",
           "parameters": [],
           "returnType": {
+            "isNullable": false,
             "name": "ElementType",
           },
         },
@@ -27149,6 +27191,7 @@ Note: This function returns the specified component's wrapper even if the specif
             },
           ],
           "returnType": {
+            "isNullable": false,
             "name": "void",
           },
         },
@@ -27164,6 +27207,7 @@ Note: This function returns the specified component's wrapper even if the specif
             },
           ],
           "returnType": {
+            "isNullable": false,
             "name": "void",
           },
         },
@@ -27179,6 +27223,7 @@ Note: This function returns the specified component's wrapper even if the specif
             },
           ],
           "returnType": {
+            "isNullable": false,
             "name": "void",
           },
         },
@@ -27194,6 +27239,7 @@ Note: This function returns the specified component's wrapper even if the specif
             },
           ],
           "returnType": {
+            "isNullable": false,
             "name": "void",
           },
         },
@@ -27209,7 +27255,8 @@ Note: This function returns the specified component's wrapper even if the specif
             },
           ],
           "returnType": {
-            "name": "this | null",
+            "isNullable": true,
+            "name": "this",
           },
         },
       ],
@@ -27224,6 +27271,7 @@ Note: This function returns the specified component's wrapper even if the specif
           "name": "blur",
           "parameters": [],
           "returnType": {
+            "isNullable": false,
             "name": "void",
           },
         },
@@ -27244,6 +27292,7 @@ Note that programmatic events ignore disabled attribute and will trigger listene
             },
           ],
           "returnType": {
+            "isNullable": false,
             "name": "void",
           },
         },
@@ -27262,7 +27311,13 @@ Note that programmatic events ignore disabled attribute and will trigger listene
             },
           ],
           "returnType": {
-            "name": "ElementWrapper<NewElementType> | null",
+            "isNullable": true,
+            "name": "ElementWrapper",
+            "typeArguments": [
+              {
+                "name": "NewElementType",
+              },
+            ],
           },
         },
         {
@@ -27280,7 +27335,13 @@ Note that programmatic events ignore disabled attribute and will trigger listene
             },
           ],
           "returnType": {
-            "name": "Array<ElementWrapper<NewElementType>>",
+            "isNullable": false,
+            "name": "Array",
+            "typeArguments": [
+              {
+                "name": "ElementWrapper<NewElementType>",
+              },
+            ],
           },
         },
         {
@@ -27298,7 +27359,13 @@ Note that programmatic events ignore disabled attribute and will trigger listene
             },
           ],
           "returnType": {
-            "name": "Array<ElementWrapper<NewElementType>>",
+            "isNullable": false,
+            "name": "Array",
+            "typeArguments": [
+              {
+                "name": "ElementWrapper<NewElementType>",
+              },
+            ],
           },
         },
         {
@@ -27328,7 +27395,13 @@ If no matching component is found, returns an empty array.",
             },
           ],
           "returnType": {
-            "name": "Array<Wrapper>",
+            "isNullable": false,
+            "name": "Array",
+            "typeArguments": [
+              {
+                "name": "Wrapper",
+              },
+            ],
           },
         },
         {
@@ -27346,7 +27419,13 @@ If no matching component is found, returns an empty array.",
             },
           ],
           "returnType": {
-            "name": "ElementWrapper<NewElementType> | null",
+            "isNullable": true,
+            "name": "ElementWrapper",
+            "typeArguments": [
+              {
+                "name": "NewElementType",
+              },
+            ],
           },
         },
         {
@@ -27364,7 +27443,13 @@ If no matching component is found, returns an empty array.",
             },
           ],
           "returnType": {
-            "name": "ElementWrapper<NewElementType> | null",
+            "isNullable": true,
+            "name": "ElementWrapper",
+            "typeArguments": [
+              {
+                "name": "NewElementType",
+              },
+            ],
           },
         },
         {
@@ -27395,7 +27480,8 @@ Note: This function returns the specified component's wrapper even if the specif
             },
           ],
           "returnType": {
-            "name": "Wrapper | null",
+            "isNullable": true,
+            "name": "Wrapper",
           },
         },
         {
@@ -27413,6 +27499,7 @@ Note: This function returns the specified component's wrapper even if the specif
             },
           ],
           "returnType": {
+            "isNullable": false,
             "name": "void",
           },
         },
@@ -27423,6 +27510,7 @@ Note: This function returns the specified component's wrapper even if the specif
           "name": "focus",
           "parameters": [],
           "returnType": {
+            "isNullable": false,
             "name": "void",
           },
         },
@@ -27433,6 +27521,7 @@ Note: This function returns the specified component's wrapper even if the specif
           "name": "getElement",
           "parameters": [],
           "returnType": {
+            "isNullable": false,
             "name": "ElementType",
           },
         },
@@ -27451,6 +27540,7 @@ Note: This function returns the specified component's wrapper even if the specif
             },
           ],
           "returnType": {
+            "isNullable": false,
             "name": "void",
           },
         },
@@ -27469,6 +27559,7 @@ Note: This function returns the specified component's wrapper even if the specif
             },
           ],
           "returnType": {
+            "isNullable": false,
             "name": "void",
           },
         },
@@ -27487,6 +27578,7 @@ Note: This function returns the specified component's wrapper even if the specif
             },
           ],
           "returnType": {
+            "isNullable": false,
             "name": "void",
           },
         },
@@ -27505,6 +27597,7 @@ Note: This function returns the specified component's wrapper even if the specif
             },
           ],
           "returnType": {
+            "isNullable": false,
             "name": "void",
           },
         },
@@ -27523,7 +27616,8 @@ Note: This function returns the specified component's wrapper even if the specif
             },
           ],
           "returnType": {
-            "name": "this | null",
+            "isNullable": true,
+            "name": "this",
           },
         },
       ],
@@ -27538,6 +27632,7 @@ Note: This function returns the specified component's wrapper even if the specif
           "name": "blur",
           "parameters": [],
           "returnType": {
+            "isNullable": false,
             "name": "void",
           },
         },
@@ -27558,6 +27653,7 @@ Note that programmatic events ignore disabled attribute and will trigger listene
             },
           ],
           "returnType": {
+            "isNullable": false,
             "name": "void",
           },
         },
@@ -27576,7 +27672,13 @@ Note that programmatic events ignore disabled attribute and will trigger listene
             },
           ],
           "returnType": {
-            "name": "ElementWrapper<NewElementType> | null",
+            "isNullable": true,
+            "name": "ElementWrapper",
+            "typeArguments": [
+              {
+                "name": "NewElementType",
+              },
+            ],
           },
         },
         {
@@ -27594,7 +27696,13 @@ Note that programmatic events ignore disabled attribute and will trigger listene
             },
           ],
           "returnType": {
-            "name": "Array<ElementWrapper<NewElementType>>",
+            "isNullable": false,
+            "name": "Array",
+            "typeArguments": [
+              {
+                "name": "ElementWrapper<NewElementType>",
+              },
+            ],
           },
         },
         {
@@ -27612,7 +27720,13 @@ Note that programmatic events ignore disabled attribute and will trigger listene
             },
           ],
           "returnType": {
-            "name": "Array<ElementWrapper<NewElementType>>",
+            "isNullable": false,
+            "name": "Array",
+            "typeArguments": [
+              {
+                "name": "ElementWrapper<NewElementType>",
+              },
+            ],
           },
         },
         {
@@ -27642,7 +27756,13 @@ If no matching component is found, returns an empty array.",
             },
           ],
           "returnType": {
-            "name": "Array<Wrapper>",
+            "isNullable": false,
+            "name": "Array",
+            "typeArguments": [
+              {
+                "name": "Wrapper",
+              },
+            ],
           },
         },
         {
@@ -27660,7 +27780,13 @@ If no matching component is found, returns an empty array.",
             },
           ],
           "returnType": {
-            "name": "ElementWrapper<NewElementType> | null",
+            "isNullable": true,
+            "name": "ElementWrapper",
+            "typeArguments": [
+              {
+                "name": "NewElementType",
+              },
+            ],
           },
         },
         {
@@ -27678,7 +27804,13 @@ If no matching component is found, returns an empty array.",
             },
           ],
           "returnType": {
-            "name": "ElementWrapper<NewElementType> | null",
+            "isNullable": true,
+            "name": "ElementWrapper",
+            "typeArguments": [
+              {
+                "name": "NewElementType",
+              },
+            ],
           },
         },
         {
@@ -27709,7 +27841,8 @@ Note: This function returns the specified component's wrapper even if the specif
             },
           ],
           "returnType": {
-            "name": "Wrapper | null",
+            "isNullable": true,
+            "name": "Wrapper",
           },
         },
         {
@@ -27727,6 +27860,7 @@ Note: This function returns the specified component's wrapper even if the specif
             },
           ],
           "returnType": {
+            "isNullable": false,
             "name": "void",
           },
         },
@@ -27737,6 +27871,7 @@ Note: This function returns the specified component's wrapper even if the specif
           "name": "focus",
           "parameters": [],
           "returnType": {
+            "isNullable": false,
             "name": "void",
           },
         },
@@ -27747,6 +27882,7 @@ Note: This function returns the specified component's wrapper even if the specif
           "name": "getElement",
           "parameters": [],
           "returnType": {
+            "isNullable": false,
             "name": "ElementType",
           },
         },
@@ -27765,6 +27901,7 @@ Note: This function returns the specified component's wrapper even if the specif
             },
           ],
           "returnType": {
+            "isNullable": false,
             "name": "void",
           },
         },
@@ -27783,6 +27920,7 @@ Note: This function returns the specified component's wrapper even if the specif
             },
           ],
           "returnType": {
+            "isNullable": false,
             "name": "void",
           },
         },
@@ -27801,6 +27939,7 @@ Note: This function returns the specified component's wrapper even if the specif
             },
           ],
           "returnType": {
+            "isNullable": false,
             "name": "void",
           },
         },
@@ -27819,6 +27958,7 @@ Note: This function returns the specified component's wrapper even if the specif
             },
           ],
           "returnType": {
+            "isNullable": false,
             "name": "void",
           },
         },
@@ -27837,7 +27977,8 @@ Note: This function returns the specified component's wrapper even if the specif
             },
           ],
           "returnType": {
-            "name": "this | null",
+            "isNullable": true,
+            "name": "this",
           },
         },
       ],
@@ -94946,6 +95087,7 @@ exports[`Test-utils selectors definitions match the snapshot 1`] = `
             },
           ],
           "returnType": {
+            "isNullable": false,
             "name": "ElementWrapper",
           },
         },
@@ -94961,7 +95103,13 @@ exports[`Test-utils selectors definitions match the snapshot 1`] = `
             },
           ],
           "returnType": {
-            "name": "MultiElementWrapper<ElementWrapper>",
+            "isNullable": false,
+            "name": "MultiElementWrapper",
+            "typeArguments": [
+              {
+                "name": "ElementWrapper",
+              },
+            ],
           },
         },
         {
@@ -94976,7 +95124,13 @@ exports[`Test-utils selectors definitions match the snapshot 1`] = `
             },
           ],
           "returnType": {
-            "name": "MultiElementWrapper<ElementWrapper>",
+            "isNullable": false,
+            "name": "MultiElementWrapper",
+            "typeArguments": [
+              {
+                "name": "ElementWrapper",
+              },
+            ],
           },
         },
         {
@@ -95001,7 +95155,13 @@ If no CSS selector is specified, returns a multi-element wrapper that matches th
             },
           ],
           "returnType": {
-            "name": "MultiElementWrapper<Wrapper>",
+            "isNullable": false,
+            "name": "MultiElementWrapper",
+            "typeArguments": [
+              {
+                "name": "Wrapper",
+              },
+            ],
           },
         },
         {
@@ -95016,6 +95176,7 @@ If no CSS selector is specified, returns a multi-element wrapper that matches th
             },
           ],
           "returnType": {
+            "isNullable": false,
             "name": "ElementWrapper",
           },
         },
@@ -95031,6 +95192,7 @@ If no CSS selector is specified, returns a multi-element wrapper that matches th
             },
           ],
           "returnType": {
+            "isNullable": false,
             "name": "ElementWrapper",
           },
         },
@@ -95058,6 +95220,7 @@ Note: This function returns the specified component's wrapper even if the specif
             },
           ],
           "returnType": {
+            "isNullable": false,
             "name": "Wrapper",
           },
         },
@@ -95065,6 +95228,7 @@ Note: This function returns the specified component's wrapper even if the specif
           "name": "getElement",
           "parameters": [],
           "returnType": {
+            "isNullable": false,
             "name": "string",
           },
         },
@@ -95080,6 +95244,7 @@ Note: This function returns the specified component's wrapper even if the specif
             },
           ],
           "returnType": {
+            "isNullable": false,
             "name": "ElementWrapper",
           },
         },
@@ -95087,6 +95252,7 @@ Note: This function returns the specified component's wrapper even if the specif
           "name": "toSelector",
           "parameters": [],
           "returnType": {
+            "isNullable": false,
             "name": "string",
           },
         },
@@ -95110,6 +95276,7 @@ Note: This function returns the specified component's wrapper even if the specif
             },
           ],
           "returnType": {
+            "isNullable": false,
             "name": "ElementWrapper",
           },
         },
@@ -95128,7 +95295,13 @@ Note: This function returns the specified component's wrapper even if the specif
             },
           ],
           "returnType": {
-            "name": "MultiElementWrapper<ElementWrapper>",
+            "isNullable": false,
+            "name": "MultiElementWrapper",
+            "typeArguments": [
+              {
+                "name": "ElementWrapper",
+              },
+            ],
           },
         },
         {
@@ -95146,7 +95319,13 @@ Note: This function returns the specified component's wrapper even if the specif
             },
           ],
           "returnType": {
-            "name": "MultiElementWrapper<ElementWrapper>",
+            "isNullable": false,
+            "name": "MultiElementWrapper",
+            "typeArguments": [
+              {
+                "name": "ElementWrapper",
+              },
+            ],
           },
         },
         {
@@ -95174,7 +95353,13 @@ If no CSS selector is specified, returns a multi-element wrapper that matches th
             },
           ],
           "returnType": {
-            "name": "MultiElementWrapper<Wrapper>",
+            "isNullable": false,
+            "name": "MultiElementWrapper",
+            "typeArguments": [
+              {
+                "name": "Wrapper",
+              },
+            ],
           },
         },
         {
@@ -95192,6 +95377,7 @@ If no CSS selector is specified, returns a multi-element wrapper that matches th
             },
           ],
           "returnType": {
+            "isNullable": false,
             "name": "ElementWrapper",
           },
         },
@@ -95210,6 +95396,7 @@ If no CSS selector is specified, returns a multi-element wrapper that matches th
             },
           ],
           "returnType": {
+            "isNullable": false,
             "name": "ElementWrapper",
           },
         },
@@ -95240,6 +95427,7 @@ Note: This function returns the specified component's wrapper even if the specif
             },
           ],
           "returnType": {
+            "isNullable": false,
             "name": "Wrapper",
           },
         },
@@ -95250,6 +95438,7 @@ Note: This function returns the specified component's wrapper even if the specif
           "name": "getElement",
           "parameters": [],
           "returnType": {
+            "isNullable": false,
             "name": "string",
           },
         },
@@ -95268,6 +95457,7 @@ Note: This function returns the specified component's wrapper even if the specif
             },
           ],
           "returnType": {
+            "isNullable": false,
             "name": "ElementWrapper",
           },
         },
@@ -95278,6 +95468,7 @@ Note: This function returns the specified component's wrapper even if the specif
           "name": "toSelector",
           "parameters": [],
           "returnType": {
+            "isNullable": false,
             "name": "string",
           },
         },
@@ -95301,6 +95492,7 @@ Note: This function returns the specified component's wrapper even if the specif
             },
           ],
           "returnType": {
+            "isNullable": false,
             "name": "ElementWrapper",
           },
         },
@@ -95319,7 +95511,13 @@ Note: This function returns the specified component's wrapper even if the specif
             },
           ],
           "returnType": {
-            "name": "MultiElementWrapper<ElementWrapper>",
+            "isNullable": false,
+            "name": "MultiElementWrapper",
+            "typeArguments": [
+              {
+                "name": "ElementWrapper",
+              },
+            ],
           },
         },
         {
@@ -95337,7 +95535,13 @@ Note: This function returns the specified component's wrapper even if the specif
             },
           ],
           "returnType": {
-            "name": "MultiElementWrapper<ElementWrapper>",
+            "isNullable": false,
+            "name": "MultiElementWrapper",
+            "typeArguments": [
+              {
+                "name": "ElementWrapper",
+              },
+            ],
           },
         },
         {
@@ -95365,7 +95569,13 @@ If no CSS selector is specified, returns a multi-element wrapper that matches th
             },
           ],
           "returnType": {
-            "name": "MultiElementWrapper<Wrapper>",
+            "isNullable": false,
+            "name": "MultiElementWrapper",
+            "typeArguments": [
+              {
+                "name": "Wrapper",
+              },
+            ],
           },
         },
         {
@@ -95383,6 +95593,7 @@ If no CSS selector is specified, returns a multi-element wrapper that matches th
             },
           ],
           "returnType": {
+            "isNullable": false,
             "name": "ElementWrapper",
           },
         },
@@ -95401,6 +95612,7 @@ If no CSS selector is specified, returns a multi-element wrapper that matches th
             },
           ],
           "returnType": {
+            "isNullable": false,
             "name": "ElementWrapper",
           },
         },
@@ -95431,6 +95643,7 @@ Note: This function returns the specified component's wrapper even if the specif
             },
           ],
           "returnType": {
+            "isNullable": false,
             "name": "Wrapper",
           },
         },
@@ -95441,6 +95654,7 @@ Note: This function returns the specified component's wrapper even if the specif
           "name": "getElement",
           "parameters": [],
           "returnType": {
+            "isNullable": false,
             "name": "string",
           },
         },
@@ -95459,6 +95673,7 @@ Note: This function returns the specified component's wrapper even if the specif
             },
           ],
           "returnType": {
+            "isNullable": false,
             "name": "ElementWrapper",
           },
         },
@@ -95469,6 +95684,7 @@ Note: This function returns the specified component's wrapper even if the specif
           "name": "toSelector",
           "parameters": [],
           "returnType": {
+            "isNullable": false,
             "name": "string",
           },
         },
@@ -95492,6 +95708,7 @@ Note: This function returns the specified component's wrapper even if the specif
             },
           ],
           "returnType": {
+            "isNullable": false,
             "name": "ElementWrapper",
           },
         },
@@ -95510,7 +95727,13 @@ Note: This function returns the specified component's wrapper even if the specif
             },
           ],
           "returnType": {
-            "name": "MultiElementWrapper<ElementWrapper>",
+            "isNullable": false,
+            "name": "MultiElementWrapper",
+            "typeArguments": [
+              {
+                "name": "ElementWrapper",
+              },
+            ],
           },
         },
         {
@@ -95528,7 +95751,13 @@ Note: This function returns the specified component's wrapper even if the specif
             },
           ],
           "returnType": {
-            "name": "MultiElementWrapper<ElementWrapper>",
+            "isNullable": false,
+            "name": "MultiElementWrapper",
+            "typeArguments": [
+              {
+                "name": "ElementWrapper",
+              },
+            ],
           },
         },
         {
@@ -95556,7 +95785,13 @@ If no CSS selector is specified, returns a multi-element wrapper that matches th
             },
           ],
           "returnType": {
-            "name": "MultiElementWrapper<Wrapper>",
+            "isNullable": false,
+            "name": "MultiElementWrapper",
+            "typeArguments": [
+              {
+                "name": "Wrapper",
+              },
+            ],
           },
         },
         {
@@ -95574,6 +95809,7 @@ If no CSS selector is specified, returns a multi-element wrapper that matches th
             },
           ],
           "returnType": {
+            "isNullable": false,
             "name": "ElementWrapper",
           },
         },
@@ -95592,6 +95828,7 @@ If no CSS selector is specified, returns a multi-element wrapper that matches th
             },
           ],
           "returnType": {
+            "isNullable": false,
             "name": "ElementWrapper",
           },
         },
@@ -95622,6 +95859,7 @@ Note: This function returns the specified component's wrapper even if the specif
             },
           ],
           "returnType": {
+            "isNullable": false,
             "name": "Wrapper",
           },
         },
@@ -95638,6 +95876,7 @@ Note: This function returns the specified component's wrapper even if the specif
             },
           ],
           "returnType": {
+            "isNullable": false,
             "name": "T",
           },
         },
@@ -95648,6 +95887,7 @@ Note: This function returns the specified component's wrapper even if the specif
           "name": "getElement",
           "parameters": [],
           "returnType": {
+            "isNullable": false,
             "name": "string",
           },
         },
@@ -95663,7 +95903,13 @@ Note: This function returns the specified component's wrapper even if the specif
             },
           ],
           "returnType": {
-            "name": "MultiElementWrapper<T>",
+            "isNullable": false,
+            "name": "MultiElementWrapper",
+            "typeArguments": [
+              {
+                "name": "T",
+              },
+            ],
           },
         },
         {
@@ -95681,6 +95927,7 @@ Note: This function returns the specified component's wrapper even if the specif
             },
           ],
           "returnType": {
+            "isNullable": false,
             "name": "ElementWrapper",
           },
         },
@@ -95691,6 +95938,7 @@ Note: This function returns the specified component's wrapper even if the specif
           "name": "toSelector",
           "parameters": [],
           "returnType": {
+            "isNullable": false,
             "name": "string",
           },
         },
