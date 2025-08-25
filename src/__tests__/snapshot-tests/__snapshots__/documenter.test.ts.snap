@@ -5083,18 +5083,6 @@ If the \`rel\` property is provided, it overrides the default behavior.",
       "type": "string",
     },
     {
-      "description": "Specifies an object of selectors and properties that are used to apply custom styles.
-
-- \`root.background\` {active, default, disabled, hover} - (Optional) Background for component states.
-- \`root.borderColor\` {active, default, disabled, hover} - (Optional) Border color for component states.
-- \`root.borderRadius\` (string) - (Optional) Border radius style.
-- \`root.borderWidth\` (string) - (Optional) Border width style.
-- \`root.color\` {active, default, disabled, hover} - (Optional) Color for component states.
-- \`root.focusRing.borderColor\` (string) - (Optional) Focus ring border color.
-- \`root.focusRing.borderRadius\` (string) - (Optional) Focus ring border radius.
-- \`root.focusRing.borderWidth\` (string) - (Optional) Focus ring border width.
-- \`root.paddingBlock\` (string) - (Optional) Block dimension padding.
-- \`root.paddingInline\` (string) - (Optional) Inline dimension padding.",
       "inlineType": {
         "name": "ButtonProps.Style",
         "properties": [
@@ -5201,6 +5189,37 @@ If the \`rel\` property is provided, it overrides the default behavior.",
                     ],
                     "type": "object",
                   },
+                  "name": "boxShadow",
+                  "optional": true,
+                  "type": "{ active?: string | undefined; default?: string | undefined; disabled?: string | undefined; hover?: string | undefined; }",
+                },
+                {
+                  "inlineType": {
+                    "name": "object",
+                    "properties": [
+                      {
+                        "name": "active",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "default",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "disabled",
+                        "optional": true,
+                        "type": "string",
+                      },
+                      {
+                        "name": "hover",
+                        "optional": true,
+                        "type": "string",
+                      },
+                    ],
+                    "type": "object",
+                  },
                   "name": "color",
                   "optional": true,
                   "type": "{ active?: string | undefined; default?: string | undefined; disabled?: string | undefined; hover?: string | undefined; }",
@@ -5246,7 +5265,7 @@ If the \`rel\` property is provided, it overrides the default behavior.",
             },
             "name": "root",
             "optional": true,
-            "type": "{ background?: { active?: string | undefined; default?: string | undefined; disabled?: string | undefined; hover?: string | undefined; } | undefined; borderColor?: { active?: string | undefined; default?: string | undefined; disabled?: string | undefined; hover?: string | undefined; } | undefined; ... 5 more ...; pa...",
+            "type": "{ background?: { active?: string | undefined; default?: string | undefined; disabled?: string | undefined; hover?: string | undefined; } | undefined; borderColor?: { active?: string | undefined; default?: string | undefined; disabled?: string | undefined; hover?: string | undefined; } | undefined; ... 6 more ...; pa...",
           },
         ],
         "type": "object",
