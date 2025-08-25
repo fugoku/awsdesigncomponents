@@ -181,22 +181,6 @@ If the label is assigned via the \`i18nStrings\` property, this label will be ig
       "type": "string",
     },
     {
-      "description": "Specifies an object of selectors and properties that are used to apply custom styles.
-
-- \`root.background\` (string) - (Optional) Background for alert.
-- \`root.borderColor\` (string) - (Optional) Border color for alert.
-- \`root.borderRadius\` (string) - (Optional) Alert border radius.
-- \`root.borderWidth\` (string) - (Optional) Alert border width.
-- \`root.color\` (string) - (Optional) Text color for alert.
-- \`root.focusRing.borderColor\` (string) - (Optional) Alert focus ring border color.
-- \`root.focusRing.borderRadius\` (string) - (Optional) Alert button focus ring border radius.
-- \`root.focusRing.borderWidth\` (string) - (Optional) Alert button focus ring border width.
-- \`dismissButton.color.active\` (string) - (Optional) Color for dismiss button active state.
-- \`dismissButton.color.default\` (string) - (Optional) Color for dismiss button default state.
-- \`dismissButton.color.hover\` (string) - (Optional) Color for dismiss button hover state.
-- \`dismissButton.focusRing.borderColor\` (string) - (Optional) Dismiss button focus ring border color.
-- \`dismissButton.focusRing.borderRadius\` (string) - (Optional) Dismiss button focus ring border radius.
-- \`dismissButton.focusRing.borderWidth\` (string) - (Optional) Dismiss button focus ring border width.",
       "inlineType": {
         "name": "AlertProps.Style",
         "properties": [
@@ -3592,15 +3576,6 @@ use the \`id\` attribute, consider setting it on a parent element instead.",
       "type": "string",
     },
     {
-      "description": "Specifies an object of selectors and properties that are used to apply custom styles.
-
-- \`root.background\` (string) - (Optional) Background for badge.
-- \`root.borderColor\` (string) - (Optional) Border color for badge.
-- \`root.borderRadius\` (string) - (Optional) Border radius style.
-- \`root.borderWidth\` (string) - (Optional) Border width style.
-- \`root.color\` (string) - (Optional) Text color for badge.
-- \`root.paddingBlock\` (string) - (Optional) Block dimension padding.
-- \`root.paddingInline\` (string) - (Optional) Inline dimension padding.",
       "inlineType": {
         "name": "BadgeProps.Style",
         "properties": [
@@ -7081,7 +7056,6 @@ If both \`readOnly\` and \`disabled\` are set, \`disabled\` takes precedence.",
       "type": "boolean",
     },
     {
-      "description": "Specifies an object of selectors and properties that are used to apply custom styles.",
       "inlineType": {
         "name": "CheckboxProps.Style",
         "properties": [
@@ -9034,21 +9008,6 @@ If no height is provided, the media slot will be displayed at its full height.",
       "type": "ContainerProps.Media",
     },
     {
-      "description": "Specifies an object of selectors and properties that are used to apply custom styles.
-
-- \`root.background\` (string) - (Optional) Background of the container.
-- \`root.borderColor\` (string) - (Optional) Border color of the container.
-- \`root.borderRadius\` (string) - (Optional) Border radius of the container.
-- \`root.borderWidth\` (string) - (Optional) Border width of the container.
-- \`root.boxShadow\` (string) - (Optional) Box shadow of the container.
-- \`content.paddingBlock\` (string) - (Optional) Block dimension padding of the content slot.
-- \`content.paddingInline\` (string) - (Optional) Inline dimension padding of the content slot.
-- \`header.paddingBlock\` (string) - (Optional) Block dimension padding of the header slot.
-- \`header.paddingInline\` (string) - (Optional) Inline dimension padding of the header slot.
-- \`footer.root.paddingBlock\` (string) - (Optional) Block dimension padding of the footer slot.
-- \`footer.root.paddingInline\` (string) - (Optional) Inline dimension padding of the footer slot.
-- \`footer.divider.borderColor\` (string) - (Optional) Border color of the footer divider.
-- \`footer.divider.borderWidth\` (string) - (Optional) Border width of the footer divider.",
       "inlineType": {
         "name": "ContainerProps.Style",
         "properties": [
@@ -11897,30 +11856,6 @@ If the \`action\` property is set, this property is ignored. **Deprecated**, rep
       "type": "boolean",
     },
     {
-      "description": "Specifies an object of selectors and properties that are used to apply custom styles.
-
-- \`item.root.background\` {error, info, inProgress, success, warning} - (Optional) Background for item types.
-- \`item.root.borderColor\` {error, info, inProgress, success, warning} - (Optional) Border color for item types.
-- \`item.root.borderRadius\` (string) - (Optional) Item border radius.
-- \`item.root.borderWidth\` (string) - (Optional) Item border width.
-- \`item.root.color\` {error, info, inProgress, success, warning} - (Optional) Color for item types.
-- \`item.root.focusRing.borderColor\` {error, info, inProgress, success, warning} - (Optional) Item focus ring border color.
-- \`item.root.focusRing.borderRadius\` (string) - (Optional) Item focus ring border radius.
-- \`item.root.focusRing.borderWidth\` (string) - (Optional) Item focus ring border width.
-- \`item.dismissButton.color.active\` {error, info, inProgress, success, warning} - (Optional) Color for dismiss button active state.
-- \`item.dismissButton.color.default\` {error, info, inProgress, success, warning} - (Optional) Color for dismiss button default state.
-- \`item.dismissButton.color.hover\` {error, info, inProgress, success, warning} - (Optional) Color for dismiss button hover state.
-- \`item.dismissButton.focusRing.borderColor\` {error, info, inProgress, success, warning} - (Optional) Dismiss button focus ring border color.
-- \`item.dismissButton.focusRing.borderRadius\` (string) - (Optional) Dismiss button focus ring border radius.
-- \`item.dismissButton.focusRing.borderWidth\` (string) - (Optional) Dismiss button focus ring border width.
-- \`notificationBar.root.background\` {active, default, hover} - (Optional) Background for notification bar states.
-- \`notificationBar.root.borderColor\` {active, default, hover} - (Optional) Border color for notification bar states.
-- \`notificationBar.root.borderRadius\` (string) - (Optional) Notification bar border radius.
-- \`notificationBar.root.borderWidth\` (string) - (Optional) Notification bar border width.
-- \`notificationBar.root.color\` {active, default, hover} - (Optional) Color for notification bar states.
-- \`notificationBar.expandButton.focusRing.borderColor\` (string) - (Optional) Border color for the expand button.
-- \`notificationBar.expandButton.focusRing.borderRadius\` (string) - (Optional) Border radius for the expand button.
-- \`notificationBar.expandButton.focusRing.borderWidth\` (string) - (Optional) Border width for the expand button.",
       "inlineType": {
         "name": "FlashbarProps.Style",
         "properties": [
@@ -15274,12 +15209,6 @@ By default, the component sets the \`rel\` attribute to "noopener noreferrer" wh
       "type": "string",
     },
     {
-      "description": "Specifies an object of selectors and properties that are used to apply custom styles.
-
-- \`root.color\` {active, default, hover} (string) - (Optional) Text color for link.
-- \`root.focusRing.borderColor\` (string) - (Optional) Focus ring border color.
-- \`root.focusRing.borderRadius\` (string) - (Optional) Focus ring border radius.
-- \`root.focusRing.borderWidth\` (string) - (Optional) Focus ring border width.",
       "inlineType": {
         "name": "LinkProps.Style",
         "properties": [
@@ -19411,7 +19340,6 @@ being included in a form submission. A read-only control is still focusable.",
       "type": "boolean",
     },
     {
-      "description": "Specifies an object of selectors and properties that are used to apply custom styles.",
       "inlineType": {
         "name": "RadioGroupProps.Style",
         "properties": [
@@ -25156,7 +25084,6 @@ If both \`readOnly\` and \`disabled\` are set, \`disabled\` takes precedence.",
       "type": "boolean",
     },
     {
-      "description": "Specifies an object of selectors and properties that are used to apply custom styles.",
       "inlineType": {
         "name": "ToggleProps.Style",
         "properties": [
