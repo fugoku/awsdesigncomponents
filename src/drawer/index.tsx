@@ -1,8 +1,10 @@
 // Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
+
 'use client';
 import React from 'react';
 
+import { getBaseProps } from '../internal/base-component';
 import useBaseComponent from '../internal/hooks/use-base-component';
 import { applyDisplayName } from '../internal/utils/apply-display-name';
 import { DrawerProps } from './interfaces';
@@ -10,9 +12,43 @@ import { InternalDrawer } from './internal';
 
 export { DrawerProps };
 
-export default function Drawer(props: DrawerProps) {
-  const internalProps = useBaseComponent('Drawer');
-  return <InternalDrawer {...internalProps} {...props} />;
-}
+const Drawer = function Drawer({
+  header,
+  headerActions,
+  footer,
+  disableContentPaddings = false,
+  loading = false,
+  children,
+  i18nStrings,
+  ...props
+}: DrawerProps) {
+  const baseComponentProps = useBaseComponent('Drawer', {
+    props: {
+      disableContentPaddings,
+      loading,
+    },
+    metadata: {
+      hasHeader: !!header,
+      hasHeaderActions: !!headerActions,
+      hasFooter: !!footer,
+    },
+  });
+  return (
+    <InternalDrawer
+      {...getBaseProps(props)}
+      {...baseComponentProps}
+      header={header}
+      headerActions={headerActions}
+      footer={footer}
+      disableContentPaddings={disableContentPaddings}
+      loading={loading}
+      i18nStrings={i18nStrings}
+    >
+      {children}
+    </InternalDrawer>
+  );
+};
+
+export default Drawer;
 
 applyDisplayName(Drawer, 'Drawer');
